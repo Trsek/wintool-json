@@ -1,0 +1,646 @@
+{
+    "id": "27213a2f-9622-40f1-a910-dbe9ed31fea3",
+    "number": 18975,
+    "barcode": "2112829x19x18975x1",
+    "name": "White - m\u011bs\u00ed\u010dn\u00ed 61669 duplicate 36295",
+    "create_time": "2021-09-08T18:37:43.308750+02:00",
+    "update_time": "2021-09-08T20:51:03.738921+02:00",
+    "thumbnail_url": "https://pbx2-blumi-cdn.getprintbox.com/media/projectthumbnail/27213a2f-9622-40f1-a910-dbe9ed31fea3?mt=1631119063.310165",
+    "customer": {
+        "id": 75250,
+        "username": "15_testsk@blumi.photo",
+        "email": "testsk@blumi.photo",
+        "date_joined": "2020-10-23T14:42:50.855716+02:00",
+        "last_login": null
+    },
+    "store": "default_store",
+    "order": {
+        "number": "blumi_2901",
+        "quantity": 1,
+        "status": 1,
+        "create_time": "2021-09-08T19:39:08.270743+02:00",
+        "payment_time": "2021-09-08T19:40:08.954251+02:00",
+        "invoice_address": {
+            "title": "",
+            "first_name": "Test",
+            "last_name": "SK",
+            "company": "",
+            "email": "testsk@blumi.photo",
+            "address1": "1",
+            "address2": "",
+            "city": "bebebeb",
+            "state": "",
+            "postcode": "1111",
+            "country": {
+                "code": "HU",
+                "name": "Hungary"
+            },
+            "phone": "321654987",
+            "external_id": 1997
+        },
+        "shipping_address": {
+            "title": "",
+            "first_name": "Test",
+            "last_name": "SK",
+            "company": "",
+            "email": "testsk@blumi.photo",
+            "address1": "1",
+            "address2": "",
+            "city": "bebebeb",
+            "state": "",
+            "postcode": "1111",
+            "country": {
+                "code": "HU",
+                "name": "Hungary"
+            },
+            "phone": "321654987",
+            "external_id": 1997
+        },
+        "shipping_carrier": {
+            "name": "Packetery",
+            "delivery_option_id": 111,
+            "tracking_number": "",
+            "shipping_price_net": 741.66,
+            "shipping_price_gross": 890.0,
+            "weight": 4.9
+        },
+        "item_price_net": 5970.00024,
+        "item_price_net_incl_discount": 0.0,
+        "item_price_gross": 7164.000288,
+        "item_price_gross_incl_discount": 0.0,
+        "total_price_net": 55680.00012,
+        "total_price_net_incl_discount": 0.0,
+        "total_price_gross": 66816.000144,
+        "total_price_gross_incl_discount": 0.0,
+        "currency": "HUF",
+        "extra_data": {
+            "total": 3240,
+            "discount": 67706,
+            "shipping": 890,
+            "discounts": {
+                "codes": [
+                    {
+                        "id": 54427,
+                        "code": "- duplicate",
+                        "active": true,
+                        "impact": 67706,
+                        "display": true,
+                        "isEmpty": false,
+                        "isSwitch": false,
+                        "netImpact": 56421.66,
+                        "actionType": "percentage",
+                        "codeString": "free99",
+                        "discountId": 222,
+                        "description": "PBX-20333",
+                        "freeShipping": true,
+                        "applyBeforeTax": false,
+                        "impactFormatted": "67 706,00 Ft\u200e",
+                        "netImpactFormatted": "56 421,66 Ft\u200e",
+                        "impactDefaultCurrency": 188.07,
+                        "netImpactDefaultCurrency": 156.73
+                    }
+                ],
+                "summary": [
+                    {
+                        "id": 27791,
+                        "price": 24840,
+                        "netPrice": 20700,
+                        "discounts": [
+                            {
+                                "id": 222,
+                                "code": "free99",
+                                "name": "- duplicate",
+                                "codeId": 54427,
+                                "impact": 24840,
+                                "netImpact": 20700,
+                                "actionType": "percentage",
+                                "freeShipping": true,
+                                "businessValue": "1.00",
+                                "applyBeforeTax": false,
+                                "businessValueTax": 0,
+                                "codeBusinessValue": null,
+                                "codeBusinessValueTax": null,
+                                "impactDefaultCurrency": 69,
+                                "netImpactDefaultCurrency": 57.5
+                            }
+                        ],
+                        "productId": "ea5d2f1c4608232e07d3aa3d998e5135_27791_0",
+                        "isShipping": false,
+                        "priceAfterReduction": 0,
+                        "priceDefaultCurrency": 69,
+                        "netPriceAfterReduction": 0,
+                        "netPriceDefaultCurrency": 57.5,
+                        "priceAfterReductionDefaultCurrency": 0,
+                        "netPriceAfterReductionDefaultCurrency": 0
+                    },
+                    {
+                        "id": 27787,
+                        "price": 12636,
+                        "netPrice": 10530,
+                        "discounts": [
+                            {
+                                "id": 222,
+                                "code": "free99",
+                                "name": "- duplicate",
+                                "codeId": 54427,
+                                "impact": 12636,
+                                "netImpact": 10530,
+                                "actionType": "percentage",
+                                "freeShipping": true,
+                                "businessValue": "1.00",
+                                "applyBeforeTax": false,
+                                "businessValueTax": 0,
+                                "codeBusinessValue": null,
+                                "codeBusinessValueTax": null,
+                                "impactDefaultCurrency": 35.1,
+                                "netImpactDefaultCurrency": 29.25
+                            }
+                        ],
+                        "productId": "6f4922f45568161a8cdf4ad2299f6d23_27787_0",
+                        "isShipping": false,
+                        "priceAfterReduction": 0,
+                        "priceDefaultCurrency": 35.1,
+                        "netPriceAfterReduction": 0,
+                        "netPriceDefaultCurrency": 29.25,
+                        "priceAfterReductionDefaultCurrency": 0,
+                        "netPriceAfterReductionDefaultCurrency": 0
+                    },
+                    {
+                        "id": 27789,
+                        "price": 7164.000288,
+                        "netPrice": 5970.00024,
+                        "discounts": [
+                            {
+                                "id": 222,
+                                "code": "free99",
+                                "name": "- duplicate",
+                                "codeId": 54427,
+                                "impact": 7164.000288,
+                                "netImpact": 5970.00024,
+                                "actionType": "percentage",
+                                "freeShipping": true,
+                                "businessValue": "1.00",
+                                "applyBeforeTax": false,
+                                "businessValueTax": 0,
+                                "codeBusinessValue": null,
+                                "codeBusinessValueTax": null,
+                                "impactDefaultCurrency": 19.900001,
+                                "netImpactDefaultCurrency": 16.583334
+                            }
+                        ],
+                        "productId": "1f0e3dad99908345f7439f8ffabdffc4_27789_0",
+                        "isShipping": false,
+                        "priceAfterReduction": 0,
+                        "priceDefaultCurrency": 19.900001,
+                        "netPriceAfterReduction": 0,
+                        "netPriceDefaultCurrency": 16.583334,
+                        "priceAfterReductionDefaultCurrency": 0,
+                        "netPriceAfterReductionDefaultCurrency": 0
+                    },
+                    {
+                        "id": 27792,
+                        "price": 7163.999856,
+                        "netPrice": 5969.99988,
+                        "discounts": [
+                            {
+                                "id": 222,
+                                "code": "free99",
+                                "name": "- duplicate",
+                                "codeId": 54427,
+                                "impact": 7163.999856,
+                                "netImpact": 5969.99988,
+                                "actionType": "percentage",
+                                "freeShipping": true,
+                                "businessValue": "1.00",
+                                "applyBeforeTax": false,
+                                "businessValueTax": 0,
+                                "codeBusinessValue": null,
+                                "codeBusinessValueTax": null,
+                                "impactDefaultCurrency": 19.9,
+                                "netImpactDefaultCurrency": 16.583333
+                            }
+                        ],
+                        "productId": "ea5d2f1c4608232e07d3aa3d998e5135_27792_0",
+                        "isShipping": false,
+                        "priceAfterReduction": 0,
+                        "priceDefaultCurrency": 19.9,
+                        "netPriceAfterReduction": 0,
+                        "netPriceDefaultCurrency": 16.583333,
+                        "priceAfterReductionDefaultCurrency": 0,
+                        "netPriceAfterReductionDefaultCurrency": 0
+                    },
+                    {
+                        "id": 27786,
+                        "price": 6083.999856,
+                        "netPrice": 5069.99988,
+                        "discounts": [
+                            {
+                                "id": 222,
+                                "code": "free99",
+                                "name": "- duplicate",
+                                "codeId": 54427,
+                                "impact": 6083.999856,
+                                "netImpact": 5069.99988,
+                                "actionType": "percentage",
+                                "freeShipping": true,
+                                "businessValue": "1.00",
+                                "applyBeforeTax": false,
+                                "businessValueTax": 0,
+                                "codeBusinessValue": null,
+                                "codeBusinessValueTax": null,
+                                "impactDefaultCurrency": 16.9,
+                                "netImpactDefaultCurrency": 14.083333
+                            }
+                        ],
+                        "productId": "6f4922f45568161a8cdf4ad2299f6d23_27786_0",
+                        "isShipping": false,
+                        "priceAfterReduction": 0,
+                        "priceDefaultCurrency": 16.9,
+                        "netPriceAfterReduction": 0,
+                        "netPriceDefaultCurrency": 14.083333,
+                        "priceAfterReductionDefaultCurrency": 0,
+                        "netPriceAfterReductionDefaultCurrency": 0
+                    },
+                    {
+                        "id": 27790,
+                        "price": 5364.000144,
+                        "netPrice": 4470.00012,
+                        "discounts": [
+                            {
+                                "id": 222,
+                                "code": "free99",
+                                "name": "- duplicate",
+                                "codeId": 54427,
+                                "impact": 5364.000144,
+                                "netImpact": 4470.00012,
+                                "actionType": "percentage",
+                                "freeShipping": true,
+                                "businessValue": "1.00",
+                                "applyBeforeTax": false,
+                                "businessValueTax": 0,
+                                "codeBusinessValue": null,
+                                "codeBusinessValueTax": null,
+                                "impactDefaultCurrency": 14.9,
+                                "netImpactDefaultCurrency": 12.416667
+                            }
+                        ],
+                        "productId": "1f0e3dad99908345f7439f8ffabdffc4_27790_0",
+                        "isShipping": false,
+                        "priceAfterReduction": 0,
+                        "priceDefaultCurrency": 14.9,
+                        "netPriceAfterReduction": 0,
+                        "netPriceDefaultCurrency": 12.416667,
+                        "priceAfterReductionDefaultCurrency": 0,
+                        "netPriceAfterReductionDefaultCurrency": 0
+                    },
+                    {
+                        "id": 27788,
+                        "price": 3564,
+                        "netPrice": 2970,
+                        "discounts": [
+                            {
+                                "id": 222,
+                                "code": "free99",
+                                "name": "- duplicate",
+                                "codeId": 54427,
+                                "impact": 3564,
+                                "netImpact": 2970,
+                                "actionType": "percentage",
+                                "freeShipping": true,
+                                "businessValue": "1.00",
+                                "applyBeforeTax": false,
+                                "businessValueTax": 0,
+                                "codeBusinessValue": null,
+                                "codeBusinessValueTax": null,
+                                "impactDefaultCurrency": 9.9,
+                                "netImpactDefaultCurrency": 8.25
+                            }
+                        ],
+                        "productId": "6f4922f45568161a8cdf4ad2299f6d23_27788_0",
+                        "isShipping": false,
+                        "priceAfterReduction": 0,
+                        "priceDefaultCurrency": 9.9,
+                        "netPriceAfterReduction": 0,
+                        "netPriceDefaultCurrency": 8.25,
+                        "priceAfterReductionDefaultCurrency": 0,
+                        "netPriceAfterReductionDefaultCurrency": 0
+                    },
+                    {
+                        "id": null,
+                        "price": 890,
+                        "netPrice": 741.66,
+                        "discounts": [
+                            {
+                                "id": 222,
+                                "code": "free99",
+                                "name": "- duplicate",
+                                "codeId": 54427,
+                                "impact": 890,
+                                "netImpact": 741.66,
+                                "actionType": "percentage",
+                                "freeShipping": true,
+                                "businessValue": "1.00",
+                                "applyBeforeTax": false,
+                                "businessValueTax": 0,
+                                "codeBusinessValue": null,
+                                "codeBusinessValueTax": null,
+                                "impactDefaultCurrency": 2.472222,
+                                "netImpactDefaultCurrency": 2.060167
+                            }
+                        ],
+                        "productId": "9bc792547aea592c0ccaaf3bbcf6cef4_0_0",
+                        "isShipping": true,
+                        "priceAfterReduction": 0,
+                        "priceDefaultCurrency": 2.472222,
+                        "netPriceAfterReduction": 0,
+                        "netPriceDefaultCurrency": 2.060167,
+                        "priceAfterReductionDefaultCurrency": 0,
+                        "netPriceAfterReductionDefaultCurrency": 0
+                    }
+                ],
+                "totalImpact": 67706,
+                "totalNetImpact": 56421.66,
+                "totalImpactDefaultCurrency": 188.07,
+                "totalNetImpactDefaultCurrency": 156.73
+            },
+            "reference": "2112829",
+            "site_flow": {
+                "carrier": {
+                    "alias": "Packetery"
+                }
+            },
+            "brand_name": "blumi.photo",
+            "customer_data": {
+                "id": 15,
+                "email": "testsk@blumi.photo",
+                "lastname": "SK",
+                "firstname": "Test",
+                "invoice_address": {
+                    "door": "",
+                    "floor": "",
+                    "street": "",
+                    "company": "",
+                    "staircase": "",
+                    "vat_number": "",
+                    "flat_number": "",
+                    "street_type": "",
+                    "house_number": ""
+                },
+                "delivery_address": {
+                    "door": "",
+                    "floor": "",
+                    "street": "",
+                    "company": "",
+                    "staircase": "",
+                    "vat_number": "",
+                    "flat_number": "",
+                    "street_type": "",
+                    "house_number": ""
+                }
+            },
+            "payment_method": "bankwire",
+            "total_tax_excl": 2700,
+            "shipping_method": "Packetery",
+            "discount_tax_excl": 56421.66,
+            "shipping_tax_excl": 741.66
+        },
+        "projects": [
+            {
+                "id": "ecb2d1a4-2b1b-4d82-913d-473fc787cf3c",
+                "family_id": 18,
+                "quantity": 1,
+                "producers": [
+                    "blumi@uncontrolled"
+                ]
+            },
+            {
+                "id": "2e03b90e-bec2-447f-8d16-a2bcabf95c19",
+                "family_id": 18,
+                "quantity": 1,
+                "producers": [
+                    "blumi@uncontrolled"
+                ]
+            },
+            {
+                "id": "0ff0fdfe-5206-48d1-93d6-a81cba29f9d0",
+                "family_id": 64,
+                "quantity": 1,
+                "producers": [
+                    "blumi@uncontrolled"
+                ]
+            },
+            {
+                "id": "795bec05-0e41-4762-ab8b-55c862b46a77",
+                "family_id": 64,
+                "quantity": 1,
+                "producers": [
+                    "blumi@uncontrolled"
+                ]
+            },
+            {
+                "id": "27213a2f-9622-40f1-a910-dbe9ed31fea3",
+                "family_id": 19,
+                "quantity": 1,
+                "producers": [
+                    "blumi@uncontrolled"
+                ]
+            },
+            {
+                "id": "40506d30-aa7e-403f-91c9-d1d95f7f20c5",
+                "family_id": 19,
+                "quantity": 1,
+                "producers": [
+                    "blumi@uncontrolled"
+                ]
+            },
+            {
+                "id": "ef726533-f05a-4adf-b61d-11b265979d8c",
+                "family_id": 18,
+                "quantity": 1,
+                "producers": [
+                    "blumi@uncontrolled"
+                ]
+            }
+        ],
+        "is_testing": true
+    },
+    "render": {
+        "time": "2021-09-08T17:41:26.261332Z",
+        "status": 0,
+        "start_time": "2021-09-08T17:40:17.561454Z",
+        "end_time": "2021-09-08T17:41:26.087178Z",
+        "queue_time": "2021-09-08T17:40:10.682414Z",
+        "size": 48373760,
+        "store_method": null,
+        "success_count": 1,
+        "exc_info": "",
+        "url": "https://pbx2-blumi-cdn.getprintbox.com/renders/27213a2f-9622-40f1-a910-dbe9ed31fea3.tar",
+        "priority": "normal",
+        "files": [
+            {
+                "filename": "27213a2f-9622-40f1-a910-dbe9ed31fea3_pages.pdf",
+                "checksum": "dd84b9c519a4e9c9d897c93b3b1ec9db",
+                "copies": 1,
+                "size": 48364276,
+                "param_id": 222703,
+                "slide_id": "",
+                "slide_type": "",
+                "url": null,
+                "height": null,
+                "width": null,
+                "photos": null
+            }
+        ]
+    },
+    "synchronize": {
+        "status": 0,
+        "claim_time": "2021-09-08T18:51:03.738914Z",
+        "time": null,
+        "priority": "normal"
+    },
+    "page_count": 14,
+    "additional_page_count": 0,
+    "used_photos_count": 13,
+    "is_orderable": false,
+    "is_saved": true,
+    "has_missing_photos": false,
+    "has_disabled_values": false,
+    "is_editor_validation_ok": true,
+    "editor_validation_status": "ACCEPTED",
+    "family": {
+        "id": 19,
+        "name": "Calendar",
+        "additional_fields": []
+    },
+    "product": {
+        "id": 2457,
+        "name": "White - blumi Wall Calendar monthly",
+        "additional_fields": [
+            {
+                "name": "shortDescription",
+                "value": {
+                    "cs": "<p>Vytvo\u0159te si vlastn\u00ed fotokalend\u00e1\u0159 jednodu\u0161e a rychle.<br />P\u0159idejte fotky, vlastn\u00ed texty a ozna\u010dte d\u016fle\u017eit\u00e1 data.<br /><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/images.png\" />\u00a0Po\u010det fotek: min. 13 a\u017e neomezen\u011b<br /> <img alt=\"\" src=\"/img/cms/landingpage/ICO/clock.png\" />\u00a0\u010cas vytvo\u0159en\u00ed: cca 15 minut<br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/calendar.png\" />\u00a0Za\u010d\u00e1tek kalend\u00e1\u0159e\u00a0v kter\u00e9mkoliv m\u011bs\u00edci<br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/ruler.png\" />\u00a0M\u016f\u017eete si vybrat s n\u00e1sleduj\u00edc\u00edch rozm\u011br\u016f a typ\u016f:<br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />M\u011bs\u00ed\u010dn\u00ed A3 32x45cm</em><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />M\u011bs\u00ed\u010dn\u00ed<span>\u00a0</span>\u00a0A4 22x32cm</em><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />Stoln\u00ed\u00a0 t\u00fddenn\u00ed 15x32cm</em><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />Stoln\u00ed\u00a0 dvout\u00fddenn\u00ed\u00a015x32cm</em><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />Ro\u010dn\u00ed A3 32x45\u00a0</em><br /><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/printer-alt.png\" />\u00a0Tisk na kvalitn\u00ed leskl\u00fd 170g pap\u00edr.<br />\u00a0 \u00a0 \u00a0B\u00edl\u00e1 h\u0159ebenov\u00e1 vazba s h\u00e1\u010dkem na zav\u011b\u0161en\u00ed.\u00a0 <br /><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/blumi-truck.png\" />\u00a0Dodac\u00ed doba:\u00a0do 7-10 prac. dn\u00ed</p>",
+                    "en": "<p class=\"tw-data-text tw-text-large XcVN5d tw-ta\" id=\"tw-target-text\" dir=\"ltr\" data-placeholder=\"P\u0159eklad\"><span lang=\"en\">Create your own photo calendar easily and quickly. <br />Add photos, your own texts and mark important dates. <br /><br />\u00a0Number of photos: min. 13 to unlimited <br />\u00a0Creation time: approx. 15 minutes <br />\u00a0Start the calendar in any month <br />\u00a0You can choose from the following sizes and types: <br />\u00a0 \u00a0Monthly A3 32x45cm <br />\u00a0 \u00a0Monthly A4 22x32cm <br />\u00a0 \u00a0Table weekly 15x32cm <br />\u00a0 \u00a0Table biweekly 15x32cm <br />\u00a0 \u00a0Annual A3 32x45</span></p>",
+                    "hu": "<p>K\u00e9sz\u00edtse el saj\u00e1t f\u00e9nyk\u00e9pes napt\u00e1r\u00e1t egyszer\u0171en \u00e9s gyorsan.<br />Fot\u00f3kat, egyedi sz\u00f6vegeket adhat hozz\u00e1 \u00e9s kijel\u00f6lheti a fontosabb id\u0151pontokat.<br /><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/images.png\" />\u00a0Fot\u00f3k sz\u00e1ma: min. 13-t\u00f3l korl\u00e1tlan<br /> <img alt=\"\" src=\"/img/cms/landingpage/ICO/clock.png\" />\u00a0Elk\u00e9sz\u00edt\u00e9si id\u0151: kb. 15 perc<br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/calendar.png\" />\u00a0A napt\u00e1r kezdete b\u00e1rmilyen h\u00f3napban<br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/ruler.png\" />\u00a0A k\u00f6vetkez\u0151 m\u00e9retek \u00e9s t\u00edpusok k\u00f6z\u00fcl v\u00e1laszthat:<br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />Havi A3 32x45cm</em><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />Havi A4 22x32cm</em><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />Asztali heti n\u00e9zettel 15x32cm</em><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />Asztali k\u00e9t hetes n\u00e9zettel 15x32cm</em><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />\u00c9vi A3 32x45\u00a0</em><br /><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/printer-alt.png\" />\u00a0Nyomtat\u00e1s kiv\u00e1l\u00f3 min\u0151s\u00e9g\u0171, f\u00e9nyes 170 g-os pap\u00edrra.<br />\u00a0 \u00a0 \u00a0Feh\u00e9r spir\u00e1los k\u00f6t\u00e9s akaszt\u00f3val.<br /><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/blumi-truck.png\" />\u00a0Sz\u00e1ll\u00edt\u00e1si id\u0151: 7-10 munkanapon bel\u00fcl</p>",
+                    "sk": "<p>Vytvorte si vlastn\u00fd fotokalend\u00e1r jednoducho a r\u00fdchlo.<br />Pridajte fotky, vlastn\u00e9 texty a ozna\u010denie d\u00f4le\u017eit\u00fdch d\u00e1tumov.<br /><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/images.png\" />\u00a0Po\u010det fotiek: min. 13 a\u017e neobmedzene<br /> <img alt=\"\" src=\"/img/cms/landingpage/ICO/clock.png\" />\u00a0\u010cas vytvorenia: cca 15 min\u00fat<br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/calendar.png\" />\u00a0Za\u010diatok kalend\u00e1ra v ktoromko\u013evek mesiaci<br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/ruler.png\" />\u00a0M\u00f4\u017eete si vybra\u0165 s nasleduj\u00facich rozmerov a typov:<br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />Mesa\u010dn\u00fd A3 32x45cm</em><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />Mesa\u010dn\u00fd A4 22x32cm</em><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />Stolov\u00fd t\u00fd\u017edenn\u00fd15x32cm</em><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />Stolov\u00fd dvojt\u00fd\u017edenn\u00fd 15x32cm</em><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />Ro\u010dn\u00fd A3 32x45\u00a0</em><br /><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/printer-alt.png\" />\u00a0Tla\u010d na kvalitn\u00fd leskl\u00fd 170g papier.<br />\u00a0 \u00a0 \u00a0Biela hrebe\u0148ov\u00e1 v\u00e4zba s h\u00e1\u010dikom na zavesenie.<br /><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/blumi-truck.png\" />\u00a0Dodacia doba:\u00a0do 7-10 prac. dn\u00ed</p>"
+                }
+            },
+            {
+                "name": "longDescription",
+                "value": {
+                    "cs": "<p><img alt=\"\" src=\"/img/cms/landingpage/section-bar.jpg\" width=\"100%\" height=\"1px\" /></p>\r\n<h3><span style=\"color: #00a2ff;\">Na jeden klik</span></h3>\r\n<p>P\u0159izp\u016fsobte si rozlo\u017een\u00ed fotografi\u00ed v kalend\u00e1\u0159i\u00a0jedn\u00edm kliknut\u00edm. P\u0159idejte si neomezen\u00e9 mno\u017estv\u00ed fotek do sv\u00e9ho kalend\u00e1\u0159e. Pou\u017eijte funkci rozlo\u017een\u00ed a vyberte si z mnoh\u00fdch designov\u00fdch variac\u00ed po\u010dtu fotografi\u00ed, kter\u00e9 sa maj\u00ed um\u00edstit na str\u00e1nku kalend\u00e1\u0159e.\u00a0</p>\r\n<h3><span style=\"color: #00a2ff;\">Rychle a jednodu\u0161e</span></h3>\r\n<p>Zm\u011bna designu je velmi jednoduch\u00e1. P\u0159idejte si obr\u00e1zky, zm\u011b\u0148te pozad\u00ed\u00a0nebo p\u0159idejte dal\u0161\u00ed textov\u00e1 pole. Vyberte si z p\u0159ipraven\u00fdch design\u016f nebo si vytvo\u0159te vlastn\u00ed.<br /><br /></p>\r\n<p><strong>Charakteristika kalend\u00e1\u0159\u016f:<br /></strong>Fotokalend\u00e1\u0159e jsou ti\u0161t\u011bny na pr\u00e9miov\u00fd nat\u00edran\u00fd polomatn\u00fd 170g pap\u00edr<br />Podkladov\u00fd kart\u00f3n 400g\u00a0<br /><br /><strong>N\u00e1stenn\u00fd m\u011bs\u00ed\u010dn\u00ed kalend\u00e1\u0159</strong><br />A3 - 32x45 cm 13\u00a0stran<br />A4 - 22x32 cm 13 stran<br /><br /><strong>Stoln\u00ed kalend\u00e1\u0159</strong>\u00a0 14x32 cm<br />t\u00fddenn\u00ed 54 stran<br />dvout\u00fddenn\u00ed 28 stran</p>\r\n<p><strong>Ro\u010dn\u00ed fotokalend\u00e1\u0159</strong>\u00a032x45 cm</p>",
+                    "en": "<h3><span style=\"color: #00a2ff;\">One click</span></h3>\r\n<p>Customize the layout of your calendar photos with a single click. Add an ulimited number of photos to your calendar. Use the layout feature to choose from many design variations. <br /><br /></p>\r\n<h3><span style=\"color: #00a2ff;\">Quickly and easily</span></h3>\r\n<p><span>Changing the design is very simple. Add images, change the background or add more text boxes. Choose from ready-made designs or create your own.<br /><br /></span></p>\r\n<p class=\"tw-data-text tw-text-large XcVN5d tw-ta\" id=\"tw-target-text\" dir=\"ltr\" data-placeholder=\"P\u0159eklad\"><span lang=\"en\"><strong>Characteristics of calendars</strong>: <br />Photo calendars are printed on premium coated semi-matt 170g paper <br />Base cardboard 400g <br /><br /> <strong>Wall monthly calendar</strong> <br />A3 - 32x45 cm 13 pages <br />A4 - 22x32 cm 13 pages <br /><br /> <strong>Desk calendar</strong> 14x32 cm <br />weekly 54 pages <br />biweekly 28 pages <br /><br /> <strong>Annual photo calendar</strong> 32x45 cm</span></p>",
+                    "hu": "<p><img alt=\"\" src=\"/img/cms/landingpage/section-bar.jpg\" width=\"100%\" height=\"1px\" /></p>\r\n<h3><span style=\"color: #00a2ff;\">Egy kattint\u00e1ssal</span></h3>\r\n<p>A fot\u00f3k elrendez\u00e9s\u00e9t a napt\u00e1rban egy kattint\u00e1ssal testreszabhatja vagy megv\u00e1ltoztathatja. Vegyen fel korl\u00e1tlan sz\u00e1m\u00fa f\u00e9nyk\u00e9pet a napt\u00e1r\u00e1ba. Az elrendez\u00e9s funkci\u00f3val a napt\u00e1rban szerepl\u0151 f\u00e9nyk\u00e9pek sokf\u00e9le st\u00edlusos v\u00e1ltozat\u00e1b\u00f3l v\u00e1laszthat.</p>\r\n<h3><span style=\"color: #00a2ff;\">Gyorsan \u00e9s egyszer\u0171en</span></h3>\r\n<p>A design megv\u00e1ltoztat\u00e1sa nagyon egyszer\u0171. K\u00e9pek hozz\u00e1ad\u00e1s\u00e1val, a h\u00e1tt\u00e9r megv\u00e1ltoztat\u00e1s\u00e1val vagy tov\u00e1bbi sz\u00f6veg hozz\u00e1ad\u00e1s\u00e1val b\u00e1rmikor megv\u00e1ltoztathatja azt. V\u00e1lasszon az el\u0151re felt\u00f6lt\u00f6tt sablonok k\u00f6z\u00fcl, vagy k\u00e9sz\u00edtsen saj\u00e1tot.<br /><br /></p>\r\n<p><strong>A napt\u00e1rak jellemz\u0151i:<br /></strong>A f\u00e9nyk\u00e9pes napt\u00e1rak pr\u00e9mium bevonat\u00fa, f\u00e9lig matt 170 g-os pap\u00edrra vannak nyomtatva<br />Alapkarton 400g<br /><br /><strong>Fali havi napt\u00e1r</strong><br />A3 - 32x45 cm 13 lap<br />A4 - 22x32 cm 13 lap<br /><br /><strong>Asztali napt\u00e1r </strong>\u00a0 14x32 cm<br />heti 54 oldal<br />k\u00e9t hetes 28 oldal</p>\r\n<p><strong>\u00c9ves f\u00e9nyk\u00e9pes napt\u00e1r </strong> 32x45 cm</p>",
+                    "sk": "<p><img alt=\"\" src=\"/img/cms/landingpage/section-bar.jpg\" width=\"100%\" height=\"1px\" /></p>\r\n<h3><span style=\"color: #00a2ff;\">Na jeden klik</span></h3>\r\n<p>Prisp\u00f4sobte si rozlo\u017eenie\u00a0fotografi\u00ed v kalend\u00e1ri jedin\u00fdm kliknut\u00edm. Pridajte si neobmedzen\u00e9 mno\u017estvo fotiek do svojho kalend\u00e1ra. Pou\u017eite funkciu rozlo\u017eenia a vyberte si z mnoh\u00fdch dizajnov\u00fdch vari\u00e1ci\u00ed po\u010dtu fotografi\u00ed, ktor\u00e9 sa maj\u00fa umiestni\u0165 na str\u00e1nku kalend\u00e1ra.\u00a0</p>\r\n<h3><span style=\"color: #00a2ff;\">R\u00fdchlo a jednoducho</span></h3>\r\n<p>Zmena dizajnu\u00a0je ve\u013emi jednoduch\u00e1. Pridajte si obr\u00e1zky, zme\u0148te pozadie alebo pridajte \u010fal\u0161ie textov\u00e9 polia. Vyberte si z pripraven\u00fdch dizajnov alebo si vytvorte vlastn\u00fd.<br /><br /></p>\r\n<p><strong>Charakteristika kalend\u00e1rov:<br /></strong>Fotokalend\u00e1re s\u00fa tla\u010den\u00e9 na pr\u00e9miov\u00fd natieran\u00fd polomatn\u00fd 170g papier<br />Podkladov\u00fd kart\u00f3n 400g\u00a0<br /><br /><strong>N\u00e1stenn\u00fd mesa\u010dn\u00fd kalend\u00e1r</strong><br />A3 - 32x45 cm 13 str\u00e1n<br />A4 - 22x32 cm 13\u00a0str\u00e1n<br /><br /><strong>Stolov\u00fd kalend\u00e1r</strong>\u00a0 14x32 cm<br />t\u00fd\u017edenn\u00fd 54 str\u00e1n<br />dvojt\u00fd\u017edenn\u00fd 28 str\u00e1n</p>\r\n<p><strong>Ro\u010dn\u00fd fotokaledn\u00e1r</strong> 32x45 cm</p>"
+                }
+            }
+        ]
+    },
+    "params": [
+        {
+            "id": 222703,
+            "attribute_values": {
+                "size": "A3 vertical",
+                "theme": "01-White",
+                "package": "standard",
+                "starting_month": "2022-01"
+            },
+            "attributes": [
+                {
+                    "name": "starting_month",
+                    "display_name": "Starting month",
+                    "value": {
+                        "name": "2022-01",
+                        "display_name": "January 2022",
+                        "additional_fields": []
+                    },
+                    "additional_fields": []
+                },
+                {
+                    "name": "theme",
+                    "display_name": "Theme",
+                    "value": {
+                        "name": "01-White",
+                        "display_name": "01-White",
+                        "additional_fields": []
+                    },
+                    "additional_fields": []
+                },
+                {
+                    "name": "size",
+                    "display_name": "Size",
+                    "value": {
+                        "name": "A3 vertical",
+                        "display_name": "A3 vertical",
+                        "additional_fields": []
+                    },
+                    "additional_fields": []
+                },
+                {
+                    "name": "package",
+                    "display_name": "Type",
+                    "value": {
+                        "name": "standard",
+                        "display_name": "Standard",
+                        "additional_fields": []
+                    },
+                    "additional_fields": []
+                }
+            ],
+            "page_count": 14,
+            "additional_page_count": 0,
+            "spine_width": null,
+            "workspace": {
+                "id": 76,
+                "name": "Cal A3 Vertical",
+                "pages": [
+                    {
+                        "id": "87",
+                        "name": "Cal A3 Vertical",
+                        "width": 320.0,
+                        "height": 450.0,
+                        "mediabox_width": 0.0,
+                        "mediabox_height": 0.0,
+                        "edge_width": {
+                            "top": 0.0,
+                            "bottom": 0.0,
+                            "left": 0.0,
+                            "right": 0.0
+                        },
+                        "safe_width": {
+                            "top": 0.0,
+                            "bottom": 0.0,
+                            "left": 0.0,
+                            "right": 0.0
+                        }
+                    }
+                ]
+            },
+            "cover_workspace": null,
+            "block_workspace": null,
+            "theme": {
+                "id": 3544,
+                "name": "White blumi"
+            },
+            "cover_theme": null,
+            "block_theme": null,
+            "skin": {
+                "id": 2,
+                "name": "Top string"
+            },
+            "cover_skin": null,
+            "block_skin": null,
+            "pages_settings": {
+                "id": 11,
+                "name": "14-14-14 - monthly"
+            },
+            "custom_data": {}
+        }
+    ],
+    "instance_name": "blumi",
+    "duplicated_from": "1344b7c1-c3ac-442b-bb2a-4e8868dec011",
+    "customer_comment": null,
+    "render_store_method": null,
+    "is_created_with_smart": false,
+    "editor_type": "web"
+}

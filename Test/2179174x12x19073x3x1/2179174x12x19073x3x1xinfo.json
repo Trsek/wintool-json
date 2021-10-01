@@ -1,0 +1,509 @@
+{
+    "id": "af415833-91f0-4207-997c-bb7b5921f22c",
+    "number": 19073,
+    "barcode": "2179174x12x19073x3x1",
+    "name": "Wall Decoration 36527",
+    "create_time": "2021-09-12T20:49:31.747039+02:00",
+    "update_time": "2021-09-26T19:37:02.001580+02:00",
+    "thumbnail_url": "https://pbx2-blumi-cdn.getprintbox.com/media/projectthumbnail/af415833-91f0-4207-997c-bb7b5921f22c?mt=1631472733.243179",
+    "customer": {
+        "id": 75250,
+        "username": "15_testsk@blumi.photo",
+        "email": "testsk@blumi.photo",
+        "date_joined": "2020-10-23T14:42:50.855716+02:00",
+        "last_login": null
+    },
+    "store": "default_store",
+    "order": {
+        "number": "blumi_2936",
+        "quantity": 3,
+        "status": 1,
+        "create_time": "2021-09-26T19:36:21.827215+02:00",
+        "payment_time": "2021-09-26T19:36:46.387939+02:00",
+        "invoice_address": {
+            "title": "",
+            "first_name": "Test",
+            "last_name": "SK",
+            "company": "",
+            "email": "testsk@blumi.photo",
+            "address1": "Hanulova 7",
+            "address2": "",
+            "city": "Bratislava",
+            "state": "",
+            "postcode": "84107",
+            "country": {
+                "code": "SK",
+                "name": "Slovakia"
+            },
+            "phone": "+421 905 905 905",
+            "external_id": 60
+        },
+        "shipping_address": {
+            "title": "",
+            "first_name": "Test",
+            "last_name": "SK",
+            "company": "",
+            "email": "testsk@blumi.photo",
+            "address1": "Hanulova 7",
+            "address2": "",
+            "city": "Bratislava",
+            "state": "",
+            "postcode": "84107",
+            "country": {
+                "code": "SK",
+                "name": "Slovakia"
+            },
+            "phone": "+421 905 905 905",
+            "external_id": 60
+        },
+        "shipping_carrier": {
+            "name": "BALIKOBOT_zasilkovna CZ",
+            "delivery_option_id": 158,
+            "tracking_number": "tracking.packeta.com/cs/?id=6622528589",
+            "shipping_price_net": 1.45,
+            "shipping_price_gross": 1.74,
+            "weight": 0.5
+        },
+        "item_price_net": 13.333333,
+        "item_price_net_incl_discount": 13.333333,
+        "item_price_gross": 16.0,
+        "item_price_gross_incl_discount": 16.0,
+        "total_price_net": 56.583332,
+        "total_price_net_incl_discount": 56.583332,
+        "total_price_gross": 67.9,
+        "total_price_gross_incl_discount": 67.9,
+        "currency": "EUR",
+        "extra_data": {
+            "total": 69.64,
+            "discount": 0,
+            "shipping": 1.74,
+            "discounts": {
+                "codes": [],
+                "summary": [
+                    {
+                        "id": 28020,
+                        "price": 19.9,
+                        "netPrice": 16.583333,
+                        "discounts": [],
+                        "productId": "6f4922f45568161a8cdf4ad2299f6d23_28020_0",
+                        "isShipping": false,
+                        "priceAfterReduction": 19.9,
+                        "priceDefaultCurrency": 19.9,
+                        "netPriceAfterReduction": 16.583333,
+                        "netPriceDefaultCurrency": 16.583333,
+                        "priceAfterReductionDefaultCurrency": 19.9,
+                        "netPriceAfterReductionDefaultCurrency": 16.583333
+                    },
+                    {
+                        "id": 27825,
+                        "price": 16,
+                        "netPrice": 13.333333,
+                        "discounts": [],
+                        "productId": "c20ad4d76fe97759aa27a0c99bff6710_27825_0",
+                        "isShipping": false,
+                        "priceAfterReduction": 16,
+                        "priceDefaultCurrency": 16,
+                        "netPriceAfterReduction": 13.333333,
+                        "netPriceDefaultCurrency": 13.333333,
+                        "priceAfterReductionDefaultCurrency": 16,
+                        "netPriceAfterReductionDefaultCurrency": 13.333333
+                    },
+                    {
+                        "id": 27825,
+                        "price": 16,
+                        "netPrice": 13.333333,
+                        "discounts": [],
+                        "productId": "c20ad4d76fe97759aa27a0c99bff6710_27825_0",
+                        "isShipping": false,
+                        "priceAfterReduction": 16,
+                        "priceDefaultCurrency": 16,
+                        "netPriceAfterReduction": 13.333333,
+                        "netPriceDefaultCurrency": 13.333333,
+                        "priceAfterReductionDefaultCurrency": 16,
+                        "netPriceAfterReductionDefaultCurrency": 13.333333
+                    },
+                    {
+                        "id": 27825,
+                        "price": 16,
+                        "netPrice": 13.333333,
+                        "discounts": [],
+                        "productId": "c20ad4d76fe97759aa27a0c99bff6710_27825_0",
+                        "isShipping": false,
+                        "priceAfterReduction": 16,
+                        "priceDefaultCurrency": 16,
+                        "netPriceAfterReduction": 13.333333,
+                        "netPriceDefaultCurrency": 13.333333,
+                        "priceAfterReductionDefaultCurrency": 16,
+                        "netPriceAfterReductionDefaultCurrency": 13.333333
+                    },
+                    {
+                        "id": null,
+                        "price": 1.74,
+                        "netPrice": 1.45,
+                        "discounts": [],
+                        "productId": "9bc792547aea592c0ccaaf3bbcf6cef4_0_0",
+                        "isShipping": true,
+                        "priceAfterReduction": 1.74,
+                        "priceDefaultCurrency": 1.74,
+                        "netPriceAfterReduction": 1.45,
+                        "netPriceDefaultCurrency": 1.45,
+                        "priceAfterReductionDefaultCurrency": 1.74,
+                        "netPriceAfterReductionDefaultCurrency": 1.45
+                    }
+                ],
+                "totalImpact": 0,
+                "totalNetImpact": 0,
+                "totalImpactDefaultCurrency": 0,
+                "totalNetImpactDefaultCurrency": 0
+            },
+            "reference": "2179174",
+            "site_flow": {
+                "carrier": {
+                    "alias": "BALIKOBOT_zasilkovna CZ"
+                }
+            },
+            "brand_name": "blumi.photo",
+            "customer_data": {
+                "id": 15,
+                "email": "testsk@blumi.photo",
+                "lastname": "SK",
+                "firstname": "Test",
+                "invoice_address": {
+                    "door": "",
+                    "floor": "",
+                    "street": "",
+                    "company": "",
+                    "staircase": "",
+                    "vat_number": "",
+                    "flat_number": "",
+                    "street_type": "",
+                    "house_number": ""
+                },
+                "delivery_address": {
+                    "door": "",
+                    "floor": "",
+                    "street": "",
+                    "company": "",
+                    "staircase": "",
+                    "vat_number": "",
+                    "flat_number": "",
+                    "street_type": "",
+                    "house_number": ""
+                }
+            },
+            "payment_method": "bankwire",
+            "total_tax_excl": 58.03,
+            "shipping_method": "BALIKOBOT_zasilkovna CZ",
+            "discount_tax_excl": 0,
+            "shipping_tax_excl": 1.45
+        },
+        "projects": [
+            {
+                "id": "af415833-91f0-4207-997c-bb7b5921f22c",
+                "family_id": 12,
+                "quantity": 3,
+                "producers": [
+                    "blumi@uncontrolled"
+                ]
+            },
+            {
+                "id": "54940eaa-11b6-4d76-8ec9-4bea7360b51a",
+                "family_id": 18,
+                "quantity": 1,
+                "producers": [
+                    "blumi@uncontrolled"
+                ]
+            }
+        ],
+        "is_testing": true
+    },
+    "render": {
+        "time": "2021-09-26T17:36:54.212092Z",
+        "status": 0,
+        "start_time": "2021-09-26T17:36:47.432507Z",
+        "end_time": "2021-09-26T17:36:54.075055Z",
+        "queue_time": "2021-09-26T17:36:47.422028Z",
+        "size": 13772800,
+        "store_method": null,
+        "success_count": 1,
+        "exc_info": "",
+        "url": "https://pbx2-blumi-cdn.getprintbox.com/renders/af415833-91f0-4207-997c-bb7b5921f22c.tar",
+        "priority": "normal",
+        "files": [
+            {
+                "filename": "af415833-91f0-4207-997c-bb7b5921f22c_pages.pdf",
+                "checksum": "5114dc61d03613da36da17f3df16fcdd",
+                "copies": 1,
+                "size": 13765142,
+                "param_id": 223151,
+                "slide_id": "",
+                "slide_type": "",
+                "url": null,
+                "height": null,
+                "width": null,
+                "photos": null
+            }
+        ]
+    },
+    "synchronize": {
+        "status": 0,
+        "claim_time": "2021-09-26T17:37:02.001569Z",
+        "time": null,
+        "priority": "normal"
+    },
+    "page_count": 1,
+    "additional_page_count": 0,
+    "used_photos_count": 9,
+    "is_orderable": false,
+    "is_saved": true,
+    "has_missing_photos": false,
+    "has_disabled_values": false,
+    "is_editor_validation_ok": true,
+    "editor_validation_status": "NOT_VALIDATED",
+    "family": {
+        "id": 12,
+        "name": "Canvas",
+        "additional_fields": []
+    },
+    "product": null,
+    "params": [
+        {
+            "id": 223151,
+            "attribute_values": {
+                "size": "60x60",
+                "style": "single",
+                "theme": "collage_3x3",
+                "border": "solidColor",
+                "material": "wrap"
+            },
+            "attributes": [
+                {
+                    "name": "border",
+                    "display_name": "Border",
+                    "value": {
+                        "name": "solidColor",
+                        "display_name": "Solid Color",
+                        "additional_fields": [
+                            {
+                                "name": "thumb",
+                                "value": {
+                                    "de": "https://pbx2-blumi-cdn.getprintbox.com/media/additionalfieldimage/69a3ef8e-c20f-4365-a920-3aa51407eba5",
+                                    "en": "https://pbx2-blumi-cdn.getprintbox.com/media/additionalfieldimage/69a3ef8e-c20f-4365-a920-3aa51407eba5"
+                                }
+                            }
+                        ]
+                    },
+                    "additional_fields": []
+                },
+                {
+                    "name": "theme",
+                    "display_name": "Theme",
+                    "value": {
+                        "name": "collage_3x3",
+                        "display_name": "collage 3x3",
+                        "additional_fields": [
+                            {
+                                "name": "for_style",
+                                "value": {
+                                    "de": "collage",
+                                    "en": "collage"
+                                }
+                            },
+                            {
+                                "name": "thumb",
+                                "value": {
+                                    "en": "https://pbx2-blumi-cdn.getprintbox.com/media/additionalfieldimage/68d22ff7-5e22-4adb-90a7-ebab6f21627f"
+                                }
+                            },
+                            {
+                                "name": "description",
+                                "value": {
+                                    "en": "9 Photo Collage"
+                                }
+                            }
+                        ]
+                    },
+                    "additional_fields": [
+                        {
+                            "name": "headerName",
+                            "value": {
+                                "de": "Thema w\u00e4hlen",
+                                "en": "Select theme"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "style",
+                    "display_name": "Art",
+                    "value": {
+                        "name": "single",
+                        "display_name": "Single",
+                        "additional_fields": [
+                            {
+                                "name": "priceJson",
+                                "value": {
+                                    "de": "{\"size\":\"30x30\", \"theme\":\"theme1\"}",
+                                    "en": "{\"size\":\"30x30\", \"theme\":\"theme1\"}"
+                                }
+                            },
+                            {
+                                "name": "showBorder",
+                                "value": {
+                                    "de": "true",
+                                    "en": "true"
+                                }
+                            },
+                            {
+                                "name": "description",
+                                "value": {
+                                    "en": "Upload your favorite photo and turn into a work of art. Choose a rectangular, square or panoramic canvas in a range of sizes"
+                                }
+                            },
+                            {
+                                "name": "enabledAttributes",
+                                "value": {
+                                    "en": "size,border, material, style"
+                                }
+                            },
+                            {
+                                "name": "thumb",
+                                "value": {
+                                    "en": "https://pbx2-blumi-cdn.getprintbox.com/media/additionalfieldimage/11f0934d-28f8-49fb-bbad-6faeb22ccc14"
+                                }
+                            }
+                        ]
+                    },
+                    "additional_fields": [
+                        {
+                            "name": "headerName",
+                            "value": {
+                                "en": "Choose canvas style"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "size",
+                    "display_name": "Size",
+                    "value": {
+                        "name": "60x60",
+                        "display_name": "60 x 60 cm",
+                        "additional_fields": [
+                            {
+                                "name": "height",
+                                "value": {
+                                    "de": "60",
+                                    "en": "60"
+                                }
+                            },
+                            {
+                                "name": "width",
+                                "value": {
+                                    "de": "60",
+                                    "en": "60"
+                                }
+                            }
+                        ]
+                    },
+                    "additional_fields": [
+                        {
+                            "name": "headerName",
+                            "value": {
+                                "de": "W\u00e4hle die Gr\u00f6\u00dfe aus",
+                                "en": "Select size"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "material",
+                    "display_name": "Material",
+                    "value": {
+                        "name": "wrap",
+                        "display_name": "Canvas Wrap",
+                        "additional_fields": [
+                            {
+                                "name": "description",
+                                "value": {
+                                    "de": "Classic canvas print is printed on a seedless and knot-free cotton or linen cloth and then stretched on solid wooden frame.",
+                                    "en": "Classic canvas print is printed on a seedless and knot-free cotton or linen cloth and then stretched on solid wooden frame."
+                                }
+                            },
+                            {
+                                "name": "showBorder",
+                                "value": {
+                                    "de": "true",
+                                    "en": "true"
+                                }
+                            },
+                            {
+                                "name": "thumb",
+                                "value": {
+                                    "en": "https://pbx2-blumi-cdn.getprintbox.com/media/additionalfieldimage/67273e95-0477-4784-9536-8b1d2724d6f6"
+                                }
+                            }
+                        ]
+                    },
+                    "additional_fields": [
+                        {
+                            "name": "headerName",
+                            "value": {
+                                "de": "W\u00e4hlen Sie Canvas-Material",
+                                "en": "Choose canvas material"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "page_count": 1,
+            "additional_page_count": 0,
+            "spine_width": null,
+            "workspace": {
+                "id": 47,
+                "name": "60x60",
+                "pages": [
+                    {
+                        "id": "58",
+                        "name": "Editor",
+                        "width": 600.0,
+                        "height": 600.0,
+                        "mediabox_width": 0.0,
+                        "mediabox_height": 0.0,
+                        "edge_width": {
+                            "top": 10.0,
+                            "bottom": 10.0,
+                            "left": 10.0,
+                            "right": 10.0
+                        },
+                        "safe_width": {
+                            "top": 0.0,
+                            "bottom": 0.0,
+                            "left": 0.0,
+                            "right": 0.0
+                        }
+                    }
+                ]
+            },
+            "cover_workspace": null,
+            "block_workspace": null,
+            "theme": {
+                "id": 223,
+                "name": "collage3x3"
+            },
+            "cover_theme": null,
+            "block_theme": null,
+            "skin": null,
+            "cover_skin": null,
+            "block_skin": null,
+            "pages_settings": null,
+            "custom_data": {}
+        }
+    ],
+    "instance_name": "blumi",
+    "duplicated_from": null,
+    "customer_comment": null,
+    "render_store_method": null,
+    "is_created_with_smart": false,
+    "editor_type": "web"
+}

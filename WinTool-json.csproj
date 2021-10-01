@@ -41,7 +41,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>
@@ -56,6 +56,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Json, Version=2.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.Json.4.7.1\lib\net461\System.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -80,7 +83,103 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Test\2112829x18x18972x1x24\2112829x18x18972x1x24xef726533-f05a-4adf-b61d-11b265979d8c_cover.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x18x18972x1x24\2112829x18x18972x1x24xef726533-f05a-4adf-b61d-11b265979d8c_cover.pdf.md5">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x18x18972x1x24\2112829x18x18972x1x24xef726533-f05a-4adf-b61d-11b265979d8c_pages.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x18x18972x1x24\2112829x18x18972x1x24xef726533-f05a-4adf-b61d-11b265979d8c_pages.pdf.md5">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x18x18972x1x24\2112829x18x18972x1x24xinfo.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x18x18973x1x72\2112829x18x18973x1x72x2e03b90e-bec2-447f-8d16-a2bcabf95c19_cover.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x18x18973x1x72\2112829x18x18973x1x72x2e03b90e-bec2-447f-8d16-a2bcabf95c19_cover.pdf.md5">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x18x18973x1x72\2112829x18x18973x1x72x2e03b90e-bec2-447f-8d16-a2bcabf95c19_pages.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x18x18973x1x72\2112829x18x18973x1x72x2e03b90e-bec2-447f-8d16-a2bcabf95c19_pages.pdf.md5">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x18x18973x1x72\2112829x18x18973x1x72xinfo.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x18x18974x1x24\2112829x18x18974x1x24xecb2d1a4-2b1b-4d82-913d-473fc787cf3c_cover.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x18x18974x1x24\2112829x18x18974x1x24xecb2d1a4-2b1b-4d82-913d-473fc787cf3c_cover.pdf.md5">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x18x18974x1x24\2112829x18x18974x1x24xecb2d1a4-2b1b-4d82-913d-473fc787cf3c_pages.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x18x18974x1x24\2112829x18x18974x1x24xecb2d1a4-2b1b-4d82-913d-473fc787cf3c_pages.pdf.md5">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x18x18974x1x24\2112829x18x18974x1x24xinfo.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x19x18975x1x14\2112829x19x18975x1x14x27213a2f-9622-40f1-a910-dbe9ed31fea3_pages.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x19x18975x1x14\2112829x19x18975x1x14x27213a2f-9622-40f1-a910-dbe9ed31fea3_pages.pdf.md5">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x19x18975x1x14\2112829x19x18975x1x14xinfo.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x64x18977x1x7\2112829x64x18977x1x7x0ff0fdfe-5206-48d1-93d6-a81cba29f9d0_pages.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x64x18977x1x7\2112829x64x18977x1x7x0ff0fdfe-5206-48d1-93d6-a81cba29f9d0_pages.pdf.md5">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x64x18977x1x7\2112829x64x18977x1x7xinfo.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x64x18978x1x13\2112829x64x18978x1x13x795bec05-0e41-4762-ab8b-55c862b46a77_pages.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x64x18978x1x13\2112829x64x18978x1x13x795bec05-0e41-4762-ab8b-55c862b46a77_pages.pdf.md5">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2112829x64x18978x1x13\2112829x64x18978x1x13xinfo.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2179174x12x19073x3x1\2179174x12x19073x3x1xaf415833-91f0-4207-997c-bb7b5921f22c_pages.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2179174x12x19073x3x1\2179174x12x19073x3x1xaf415833-91f0-4207-997c-bb7b5921f22c_pages.pdf.md5">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2179174x12x19073x3x1\2179174x12x19073x3x1xinfo.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2179174x18x19595x1x24\2179174x18x19595x1x24x54940eaa-11b6-4d76-8ec9-4bea7360b51a_cover.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2179174x18x19595x1x24\2179174x18x19595x1x24x54940eaa-11b6-4d76-8ec9-4bea7360b51a_cover.pdf.md5">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2179174x18x19595x1x24\2179174x18x19595x1x24x54940eaa-11b6-4d76-8ec9-4bea7360b51a_pages.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2179174x18x19595x1x24\2179174x18x19595x1x24x54940eaa-11b6-4d76-8ec9-4bea7360b51a_pages.pdf.md5">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test\2179174x18x19595x1x24\2179174x18x19595x1x24xinfo.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="WinTool-json.ico" />
@@ -103,6 +202,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <PostBuildEvent>if $(ConfigurationName) == Release (del "$(ProjectDir)\bin\Release\*.xml")
+if $(ConfigurationName) == Release (rmdir "$(ProjectDir)\bin\Release\Test" /S /Q)
 if $(ConfigurationName) == Release (del "$(ProjectDir)\WinTool-JSON_*.exe")
 if $(ConfigurationName) == Release (call "C:\Program Files (x86)\Inno Setup 6\Compil32.exe" /cc "$(ProjectDir)\WinTool-JSON.iss")
 if $(ConfigurationName) == Release (git add -u)

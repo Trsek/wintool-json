@@ -1,0 +1,662 @@
+{
+    "id": "795bec05-0e41-4762-ab8b-55c862b46a77",
+    "number": 18978,
+    "barcode": "2112829x64x18978x1x13",
+    "name": "Fotostojan s r\u00e1me\u010dkem 99190 duplicate 75955",
+    "create_time": "2021-09-08T18:37:45.636364+02:00",
+    "update_time": "2021-09-08T20:48:20.530649+02:00",
+    "thumbnail_url": "https://pbx2-blumi-cdn.getprintbox.com/media/projectthumbnail/795bec05-0e41-4762-ab8b-55c862b46a77?mt=1631119065.637687",
+    "customer": {
+        "id": 75250,
+        "username": "15_testsk@blumi.photo",
+        "email": "testsk@blumi.photo",
+        "date_joined": "2020-10-23T14:42:50.855716+02:00",
+        "last_login": null
+    },
+    "store": "default_store",
+    "order": {
+        "number": "blumi_2901",
+        "quantity": 1,
+        "status": 1,
+        "create_time": "2021-09-08T19:39:08.270743+02:00",
+        "payment_time": "2021-09-08T19:40:08.954251+02:00",
+        "invoice_address": {
+            "title": "",
+            "first_name": "Test",
+            "last_name": "SK",
+            "company": "",
+            "email": "testsk@blumi.photo",
+            "address1": "1",
+            "address2": "",
+            "city": "bebebeb",
+            "state": "",
+            "postcode": "1111",
+            "country": {
+                "code": "HU",
+                "name": "Hungary"
+            },
+            "phone": "321654987",
+            "external_id": 1997
+        },
+        "shipping_address": {
+            "title": "",
+            "first_name": "Test",
+            "last_name": "SK",
+            "company": "",
+            "email": "testsk@blumi.photo",
+            "address1": "1",
+            "address2": "",
+            "city": "bebebeb",
+            "state": "",
+            "postcode": "1111",
+            "country": {
+                "code": "HU",
+                "name": "Hungary"
+            },
+            "phone": "321654987",
+            "external_id": 1997
+        },
+        "shipping_carrier": {
+            "name": "Packetery",
+            "delivery_option_id": 111,
+            "tracking_number": "",
+            "shipping_price_net": 741.66,
+            "shipping_price_gross": 890.0,
+            "weight": 4.9
+        },
+        "item_price_net": 5969.99988,
+        "item_price_net_incl_discount": 0.0,
+        "item_price_gross": 7163.999856,
+        "item_price_gross_incl_discount": 0.0,
+        "total_price_net": 55680.00012,
+        "total_price_net_incl_discount": 0.0,
+        "total_price_gross": 66816.000144,
+        "total_price_gross_incl_discount": 0.0,
+        "currency": "HUF",
+        "extra_data": {
+            "total": 3240,
+            "discount": 67706,
+            "shipping": 890,
+            "discounts": {
+                "codes": [
+                    {
+                        "id": 54427,
+                        "code": "- duplicate",
+                        "active": true,
+                        "impact": 67706,
+                        "display": true,
+                        "isEmpty": false,
+                        "isSwitch": false,
+                        "netImpact": 56421.66,
+                        "actionType": "percentage",
+                        "codeString": "free99",
+                        "discountId": 222,
+                        "description": "PBX-20333",
+                        "freeShipping": true,
+                        "applyBeforeTax": false,
+                        "impactFormatted": "67 706,00 Ft\u200e",
+                        "netImpactFormatted": "56 421,66 Ft\u200e",
+                        "impactDefaultCurrency": 188.07,
+                        "netImpactDefaultCurrency": 156.73
+                    }
+                ],
+                "summary": [
+                    {
+                        "id": 27791,
+                        "price": 24840,
+                        "netPrice": 20700,
+                        "discounts": [
+                            {
+                                "id": 222,
+                                "code": "free99",
+                                "name": "- duplicate",
+                                "codeId": 54427,
+                                "impact": 24840,
+                                "netImpact": 20700,
+                                "actionType": "percentage",
+                                "freeShipping": true,
+                                "businessValue": "1.00",
+                                "applyBeforeTax": false,
+                                "businessValueTax": 0,
+                                "codeBusinessValue": null,
+                                "codeBusinessValueTax": null,
+                                "impactDefaultCurrency": 69,
+                                "netImpactDefaultCurrency": 57.5
+                            }
+                        ],
+                        "productId": "ea5d2f1c4608232e07d3aa3d998e5135_27791_0",
+                        "isShipping": false,
+                        "priceAfterReduction": 0,
+                        "priceDefaultCurrency": 69,
+                        "netPriceAfterReduction": 0,
+                        "netPriceDefaultCurrency": 57.5,
+                        "priceAfterReductionDefaultCurrency": 0,
+                        "netPriceAfterReductionDefaultCurrency": 0
+                    },
+                    {
+                        "id": 27787,
+                        "price": 12636,
+                        "netPrice": 10530,
+                        "discounts": [
+                            {
+                                "id": 222,
+                                "code": "free99",
+                                "name": "- duplicate",
+                                "codeId": 54427,
+                                "impact": 12636,
+                                "netImpact": 10530,
+                                "actionType": "percentage",
+                                "freeShipping": true,
+                                "businessValue": "1.00",
+                                "applyBeforeTax": false,
+                                "businessValueTax": 0,
+                                "codeBusinessValue": null,
+                                "codeBusinessValueTax": null,
+                                "impactDefaultCurrency": 35.1,
+                                "netImpactDefaultCurrency": 29.25
+                            }
+                        ],
+                        "productId": "6f4922f45568161a8cdf4ad2299f6d23_27787_0",
+                        "isShipping": false,
+                        "priceAfterReduction": 0,
+                        "priceDefaultCurrency": 35.1,
+                        "netPriceAfterReduction": 0,
+                        "netPriceDefaultCurrency": 29.25,
+                        "priceAfterReductionDefaultCurrency": 0,
+                        "netPriceAfterReductionDefaultCurrency": 0
+                    },
+                    {
+                        "id": 27789,
+                        "price": 7164.000288,
+                        "netPrice": 5970.00024,
+                        "discounts": [
+                            {
+                                "id": 222,
+                                "code": "free99",
+                                "name": "- duplicate",
+                                "codeId": 54427,
+                                "impact": 7164.000288,
+                                "netImpact": 5970.00024,
+                                "actionType": "percentage",
+                                "freeShipping": true,
+                                "businessValue": "1.00",
+                                "applyBeforeTax": false,
+                                "businessValueTax": 0,
+                                "codeBusinessValue": null,
+                                "codeBusinessValueTax": null,
+                                "impactDefaultCurrency": 19.900001,
+                                "netImpactDefaultCurrency": 16.583334
+                            }
+                        ],
+                        "productId": "1f0e3dad99908345f7439f8ffabdffc4_27789_0",
+                        "isShipping": false,
+                        "priceAfterReduction": 0,
+                        "priceDefaultCurrency": 19.900001,
+                        "netPriceAfterReduction": 0,
+                        "netPriceDefaultCurrency": 16.583334,
+                        "priceAfterReductionDefaultCurrency": 0,
+                        "netPriceAfterReductionDefaultCurrency": 0
+                    },
+                    {
+                        "id": 27792,
+                        "price": 7163.999856,
+                        "netPrice": 5969.99988,
+                        "discounts": [
+                            {
+                                "id": 222,
+                                "code": "free99",
+                                "name": "- duplicate",
+                                "codeId": 54427,
+                                "impact": 7163.999856,
+                                "netImpact": 5969.99988,
+                                "actionType": "percentage",
+                                "freeShipping": true,
+                                "businessValue": "1.00",
+                                "applyBeforeTax": false,
+                                "businessValueTax": 0,
+                                "codeBusinessValue": null,
+                                "codeBusinessValueTax": null,
+                                "impactDefaultCurrency": 19.9,
+                                "netImpactDefaultCurrency": 16.583333
+                            }
+                        ],
+                        "productId": "ea5d2f1c4608232e07d3aa3d998e5135_27792_0",
+                        "isShipping": false,
+                        "priceAfterReduction": 0,
+                        "priceDefaultCurrency": 19.9,
+                        "netPriceAfterReduction": 0,
+                        "netPriceDefaultCurrency": 16.583333,
+                        "priceAfterReductionDefaultCurrency": 0,
+                        "netPriceAfterReductionDefaultCurrency": 0
+                    },
+                    {
+                        "id": 27786,
+                        "price": 6083.999856,
+                        "netPrice": 5069.99988,
+                        "discounts": [
+                            {
+                                "id": 222,
+                                "code": "free99",
+                                "name": "- duplicate",
+                                "codeId": 54427,
+                                "impact": 6083.999856,
+                                "netImpact": 5069.99988,
+                                "actionType": "percentage",
+                                "freeShipping": true,
+                                "businessValue": "1.00",
+                                "applyBeforeTax": false,
+                                "businessValueTax": 0,
+                                "codeBusinessValue": null,
+                                "codeBusinessValueTax": null,
+                                "impactDefaultCurrency": 16.9,
+                                "netImpactDefaultCurrency": 14.083333
+                            }
+                        ],
+                        "productId": "6f4922f45568161a8cdf4ad2299f6d23_27786_0",
+                        "isShipping": false,
+                        "priceAfterReduction": 0,
+                        "priceDefaultCurrency": 16.9,
+                        "netPriceAfterReduction": 0,
+                        "netPriceDefaultCurrency": 14.083333,
+                        "priceAfterReductionDefaultCurrency": 0,
+                        "netPriceAfterReductionDefaultCurrency": 0
+                    },
+                    {
+                        "id": 27790,
+                        "price": 5364.000144,
+                        "netPrice": 4470.00012,
+                        "discounts": [
+                            {
+                                "id": 222,
+                                "code": "free99",
+                                "name": "- duplicate",
+                                "codeId": 54427,
+                                "impact": 5364.000144,
+                                "netImpact": 4470.00012,
+                                "actionType": "percentage",
+                                "freeShipping": true,
+                                "businessValue": "1.00",
+                                "applyBeforeTax": false,
+                                "businessValueTax": 0,
+                                "codeBusinessValue": null,
+                                "codeBusinessValueTax": null,
+                                "impactDefaultCurrency": 14.9,
+                                "netImpactDefaultCurrency": 12.416667
+                            }
+                        ],
+                        "productId": "1f0e3dad99908345f7439f8ffabdffc4_27790_0",
+                        "isShipping": false,
+                        "priceAfterReduction": 0,
+                        "priceDefaultCurrency": 14.9,
+                        "netPriceAfterReduction": 0,
+                        "netPriceDefaultCurrency": 12.416667,
+                        "priceAfterReductionDefaultCurrency": 0,
+                        "netPriceAfterReductionDefaultCurrency": 0
+                    },
+                    {
+                        "id": 27788,
+                        "price": 3564,
+                        "netPrice": 2970,
+                        "discounts": [
+                            {
+                                "id": 222,
+                                "code": "free99",
+                                "name": "- duplicate",
+                                "codeId": 54427,
+                                "impact": 3564,
+                                "netImpact": 2970,
+                                "actionType": "percentage",
+                                "freeShipping": true,
+                                "businessValue": "1.00",
+                                "applyBeforeTax": false,
+                                "businessValueTax": 0,
+                                "codeBusinessValue": null,
+                                "codeBusinessValueTax": null,
+                                "impactDefaultCurrency": 9.9,
+                                "netImpactDefaultCurrency": 8.25
+                            }
+                        ],
+                        "productId": "6f4922f45568161a8cdf4ad2299f6d23_27788_0",
+                        "isShipping": false,
+                        "priceAfterReduction": 0,
+                        "priceDefaultCurrency": 9.9,
+                        "netPriceAfterReduction": 0,
+                        "netPriceDefaultCurrency": 8.25,
+                        "priceAfterReductionDefaultCurrency": 0,
+                        "netPriceAfterReductionDefaultCurrency": 0
+                    },
+                    {
+                        "id": null,
+                        "price": 890,
+                        "netPrice": 741.66,
+                        "discounts": [
+                            {
+                                "id": 222,
+                                "code": "free99",
+                                "name": "- duplicate",
+                                "codeId": 54427,
+                                "impact": 890,
+                                "netImpact": 741.66,
+                                "actionType": "percentage",
+                                "freeShipping": true,
+                                "businessValue": "1.00",
+                                "applyBeforeTax": false,
+                                "businessValueTax": 0,
+                                "codeBusinessValue": null,
+                                "codeBusinessValueTax": null,
+                                "impactDefaultCurrency": 2.472222,
+                                "netImpactDefaultCurrency": 2.060167
+                            }
+                        ],
+                        "productId": "9bc792547aea592c0ccaaf3bbcf6cef4_0_0",
+                        "isShipping": true,
+                        "priceAfterReduction": 0,
+                        "priceDefaultCurrency": 2.472222,
+                        "netPriceAfterReduction": 0,
+                        "netPriceDefaultCurrency": 2.060167,
+                        "priceAfterReductionDefaultCurrency": 0,
+                        "netPriceAfterReductionDefaultCurrency": 0
+                    }
+                ],
+                "totalImpact": 67706,
+                "totalNetImpact": 56421.66,
+                "totalImpactDefaultCurrency": 188.07,
+                "totalNetImpactDefaultCurrency": 156.73
+            },
+            "reference": "2112829",
+            "site_flow": {
+                "carrier": {
+                    "alias": "Packetery"
+                }
+            },
+            "brand_name": "blumi.photo",
+            "customer_data": {
+                "id": 15,
+                "email": "testsk@blumi.photo",
+                "lastname": "SK",
+                "firstname": "Test",
+                "invoice_address": {
+                    "door": "",
+                    "floor": "",
+                    "street": "",
+                    "company": "",
+                    "staircase": "",
+                    "vat_number": "",
+                    "flat_number": "",
+                    "street_type": "",
+                    "house_number": ""
+                },
+                "delivery_address": {
+                    "door": "",
+                    "floor": "",
+                    "street": "",
+                    "company": "",
+                    "staircase": "",
+                    "vat_number": "",
+                    "flat_number": "",
+                    "street_type": "",
+                    "house_number": ""
+                }
+            },
+            "payment_method": "bankwire",
+            "total_tax_excl": 2700,
+            "shipping_method": "Packetery",
+            "discount_tax_excl": 56421.66,
+            "shipping_tax_excl": 741.66
+        },
+        "projects": [
+            {
+                "id": "795bec05-0e41-4762-ab8b-55c862b46a77",
+                "family_id": 64,
+                "quantity": 1,
+                "producers": [
+                    "blumi@uncontrolled"
+                ]
+            },
+            {
+                "id": "2e03b90e-bec2-447f-8d16-a2bcabf95c19",
+                "family_id": 18,
+                "quantity": 1,
+                "producers": [
+                    "blumi@uncontrolled"
+                ]
+            },
+            {
+                "id": "ecb2d1a4-2b1b-4d82-913d-473fc787cf3c",
+                "family_id": 18,
+                "quantity": 1,
+                "producers": [
+                    "blumi@uncontrolled"
+                ]
+            },
+            {
+                "id": "27213a2f-9622-40f1-a910-dbe9ed31fea3",
+                "family_id": 19,
+                "quantity": 1,
+                "producers": [
+                    "blumi@uncontrolled"
+                ]
+            },
+            {
+                "id": "ef726533-f05a-4adf-b61d-11b265979d8c",
+                "family_id": 18,
+                "quantity": 1,
+                "producers": [
+                    "blumi@uncontrolled"
+                ]
+            },
+            {
+                "id": "0ff0fdfe-5206-48d1-93d6-a81cba29f9d0",
+                "family_id": 64,
+                "quantity": 1,
+                "producers": [
+                    "blumi@uncontrolled"
+                ]
+            },
+            {
+                "id": "40506d30-aa7e-403f-91c9-d1d95f7f20c5",
+                "family_id": 19,
+                "quantity": 1,
+                "producers": [
+                    "blumi@uncontrolled"
+                ]
+            }
+        ],
+        "is_testing": true
+    },
+    "render": {
+        "time": "2021-09-08T17:40:19.738944Z",
+        "status": 0,
+        "start_time": "2021-09-08T17:40:10.157058Z",
+        "end_time": "2021-09-08T17:40:19.554715Z",
+        "queue_time": "2021-09-08T17:40:10.137093Z",
+        "size": 16896000,
+        "store_method": null,
+        "success_count": 1,
+        "exc_info": "",
+        "url": "https://pbx2-blumi-cdn.getprintbox.com/renders/795bec05-0e41-4762-ab8b-55c862b46a77.tar",
+        "priority": "normal",
+        "files": [
+            {
+                "filename": "795bec05-0e41-4762-ab8b-55c862b46a77_pages.pdf",
+                "checksum": "3c269583a4c3938efaab9a3fdc39c496",
+                "copies": 1,
+                "size": 16884565,
+                "param_id": 222706,
+                "slide_id": "",
+                "slide_type": "",
+                "url": null,
+                "height": null,
+                "width": null,
+                "photos": null
+            }
+        ]
+    },
+    "synchronize": {
+        "status": 0,
+        "claim_time": "2021-09-08T18:48:20.530642Z",
+        "time": null,
+        "priority": "normal"
+    },
+    "page_count": 13,
+    "additional_page_count": 0,
+    "used_photos_count": 12,
+    "is_orderable": false,
+    "is_saved": true,
+    "has_missing_photos": false,
+    "has_disabled_values": false,
+    "is_editor_validation_ok": true,
+    "editor_validation_status": "ACCEPTED",
+    "family": {
+        "id": 64,
+        "name": "Photo Decoration",
+        "additional_fields": []
+    },
+    "product": {
+        "id": 2607,
+        "name": "Border",
+        "additional_fields": [
+            {
+                "name": "shortDescription",
+                "value": {
+                    "cs": "<h2><span>Vytvo\u0159te si\u00a0dekora\u010dn\u00ed fotostojan s 12 fotkami.</span></h2>\r\n<h3><span>P\u0159idejte 12 fotek. Jednoduch\u00e9 a rychl\u00e9.</span></h3>\r\n<img alt=\"\" src=\"/img/cms/landingpage/ICO/images.png\" /><span>\u00a0</span><strong>Po\u010det fotek</strong><span>:\u00a012<br /></span><img alt=\"\" src=\"/img/cms/landingpage/ICO/book-open.png\" /><span>\u00a0</span><strong>\u010cas vytvo\u0159en\u00ed</strong><span>: cca 5-10 minut</span><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/ruler.png\" /><span>\u00a0</span><strong>Rozm\u011bry</strong><span>:\u00a0</span><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />fotky 15x21 cm</em><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />stojan 21x16 cm</em><em><br /></em><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/book.png\" /><span>\u00a0<strong>Stojan</strong>:<br />\u00a0pevn\u00fd stojan z 2mm kart\u00f3nu pot\u00e1hnut\u00fd ochrannou laminac\u00ed\u00a0a se\u00a0spir\u00e1lou.<br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />\u010cern\u00fd</em><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />B\u00edl\u00fd</em></span><br /><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/printer-alt.png\" /><span>\u00a0</span><strong>Tisk</strong><span>\u00a0na pr\u00e9miov\u00fd polomatn\u00fd 300g pap\u00edr.</span><br /><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/blumi-truck.png\" /><span>\u00a0</span><strong>Dodac\u00ed doba</strong><span>:\u00a0do 7 prac. dn\u00ed</span>",
+                    "en": "<h2><span>Create a decorative photo stand with 12 photos.<br /></span></h2>\r\n<p><span>Add 12 photos. Simple and fast.\u00a0<br /><br /><strong>Number of photos</strong>:\u00a012<br /><strong><img alt=\"\" src=\"/img/cms/landingpage/ICO/book-open.png\" />Creation time</strong>: cca 5-10 minutes<br /><strong>Dimensions:</strong>\u00a0<br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />photos 15x21 cm</em><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />stand\u00a021x16 cm</em></span></p>\r\n<p><span><strong>Stand:</strong><br />Solid stand made of 2mm\u00a0cardboard\u00a0protected with lamination and with\u00a0a spiral.<br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />Black</em><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />White</em><br /><br /><strong><img alt=\"\" src=\"/img/cms/landingpage/ICO/printer-alt.png\" />Print</strong> on semi-matt 300g paper.</span><span><br /><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/blumi-truck.png\" /><strong>Delivery time</strong>: up to 7\u00a0work days<br /></span></p>",
+                    "hu": "<h2><span>K\u00e9sz\u00edts dekorat\u00edv asztali fot\u00f3\u00e1llv\u00e1nyt magadnak.</span></h2>\r\n<h3><span>Rakj\u00e1l be 12 f\u00e9nyk\u00e9pet egyszer\u0171en \u00e9s gyorsan.</span></h3>\r\n<img alt=\"\" src=\"/img/cms/landingpage/ICO/images.png\" /> <strong>Fot\u00f3k sz\u00e1ma</strong><span>: 12<br /></span><img alt=\"\" src=\"/img/cms/landingpage/ICO/book-open.png\" /> <strong>Elk\u00e9sz\u00edt\u00e9si id\u0151</strong><span>: kb 5-10 perc</span><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/ruler.png\" /> <strong>M\u00e9retek</strong><span>: </span><br /><em> <img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />f\u00e9nyk\u00e9pek 15x21 cm</em><br /><em> <img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />\u00e1llv\u00e1ny 21x16 cm</em><em><br /></em><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/book.png\" /><span> <strong>\u00c1llv\u00e1ny</strong>:<br />szil\u00e1rd \u00e1llv\u00e1ny 2 mm-es kartonb\u00f3l, v\u00e9d\u0151r\u00e9teggel bevonva, spir\u00e1l k\u00f6t\u00e9s<br /><em> <img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />Fekete</em><br /><em> <img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />Feh\u00e9r</em><em> </em></span><br /><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/printer-alt.png\" /> <strong>Nyomtat\u00e1s</strong><span> kiv\u00e1l\u00f3 min\u0151s\u00e9g\u0171, f\u00e9lig matt 300g-os pap\u00edrra.</span><br /><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/blumi-truck.png\" /> <strong>Sz\u00e1ll\u00edt\u00e1si id\u0151</strong><span>: 7 munkanapon bel\u00fcl.</span>",
+                    "sk": "<h2><span>Vytvorte si\u00a0dekora\u010dn\u00fd fotostojan s 12-timi fotkami.</span></h2>\r\n<h3><span>Pridajte 12 fotiek. Jednoduch\u00e9 a r\u00fdchle.</span></h3>\r\n<img alt=\"\" src=\"/img/cms/landingpage/ICO/images.png\" /><span>\u00a0</span><strong>Po\u010det fotiek</strong><span>:\u00a012<br /></span><img alt=\"\" src=\"/img/cms/landingpage/ICO/book-open.png\" /><span>\u00a0</span><strong>\u010cas vytvorenia</strong><span>: cca 5-10 min\u00fat</span><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/ruler.png\" /><span>\u00a0</span><strong>Rozmery</strong><span>:\u00a0</span><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />fotky 15x21 cm</em><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />stojan 21x16 cm</em><em><br /></em><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/book.png\" /><span>\u00a0<strong>Stojan</strong>:<br />pevn\u00fd stojan z 2mm kart\u00f3nu potiahnut\u00fd ochrannou lamin\u00e1ciou a so \u0161pir\u00e1lou.<br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />\u010cierny</em><br /><em>\u00a0 \u00a0<img alt=\"\" src=\"/img/cms/landingpage/ICO/dot.png\" />Biely</em><em>\u00a0\u00a0</em></span><br /><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/printer-alt.png\" /><span>\u00a0</span><strong>Tla\u010d</strong><span>\u00a0na pr\u00e9miov\u00fd polomatn\u00fd 300g papier.</span><br /><br /><img alt=\"\" src=\"/img/cms/landingpage/ICO/blumi-truck.png\" /><span>\u00a0</span><strong>Dodacia doba</strong><span>:\u00a0do 7 prac. dn\u00ed</span>"
+                }
+            },
+            {
+                "name": "longDescription",
+                "value": {
+                    "cs": "<p><img alt=\"\" src=\"/img/cms/landingpage/section-bar.jpg\" width=\"100%\" height=\"1px\" /></p>\r\n<h3><span style=\"color: #00a2ff;\"><span>Jeden stojan s 12 fotografiemi, 12 n\u00e1dhern\u00fdch vzpom\u00ednek.</span></span></h3>\r\n<p><span>Tento foto stojan je dokonal\u00fdm \u0159e\u0161en\u00edm, pokud m\u00e1te spoustu kr\u00e1sn\u00fdch fotografi\u00ed, ale nem\u00e1te dostatek m\u00edsta pro jejich um\u00edst\u011bn\u00ed. Na elegantn\u00edm stojanu si m\u016f\u017eete vybrat z 12 skv\u011bl\u00fdch fotografi\u00ed. Ka\u017ed\u00fd den si m\u016f\u017eete vybrat jinou fotografii. N\u00e1v\u0161t\u011bv\u011b\u00a0se m\u016f\u017eete pochlubit t\u0159eba hned v\u0161emi najednou.</span></p>",
+                    "en": "<h3><span style=\"color: #00a2ff;\"><span>One photo stand with 12 photos, 12\u00a0 wonderful memories.\u00a0 </span></span></h3>\r\n<br />This photo stand is a perfect solution if you have a lot of beautiful photos, but you don\u00b4t have enough space for them. You can choose 12 great photos on the elegant stand. Every day you can choose different photo and to your visitors you can show off all your photos at once.<br /><br />\r\n<pre class=\"tw-data-text tw-text-large XcVN5d tw-ta\" id=\"tw-target-text\" dir=\"ltr\" data-placeholder=\"P\u0159eklad\"></pre>",
+                    "hu": "<p><img alt=\"\" src=\"/img/cms/landingpage/section-bar.jpg\" width=\"100%\" height=\"1px\" /></p>\r\n<h3><span style=\"color: #00a2ff;\"><span>Egy asztali fot\u00f3\u00e1llv\u00e1ny 12 fot\u00f3val, 12 csod\u00e1latos eml\u00e9k.</span></span></h3>\r\n<p><span>Egy asztali fot\u00f3\u00e1llv\u00e1ny 12 fot\u00f3val, 12 csod\u00e1latos eml\u00e9k. Ez a asztali fot\u00f3\u00e1llv\u00e1ny t\u00f6k\u00e9letes megold\u00e1s, ha sok gy\u00f6ny\u00f6r\u0171 fot\u00f3d van, de nincs elegend\u0151 helyed az elhelyez\u00e9sre. Az eleg\u00e1ns asztal fot\u00f3\u00e1llv\u00e1nyon 12 nagyszer\u0171 fot\u00f3 k\u00f6z\u00fcl v\u00e1laszthatsz. Minden nap m\u00e1s k\u00e9pet v\u00e1laszthatsz magadnak. \u00cdgy b\u00fcszk\u00e9n megmutathatod minden ismer\u0151s\u00f6dnek. </span></p>",
+                    "sk": "<p><img alt=\"\" src=\"/img/cms/landingpage/section-bar.jpg\" width=\"100%\" height=\"1px\" /></p>\r\n<h3><span style=\"color: #00a2ff;\"><span>Jeden stojan s 12 fotografiami, 12 n\u00e1dhern\u00fdch spomienok.</span></span></h3>\r\n<p><span>Tento foto stojan je dokonal\u00fdm rie\u0161en\u00edm, ak m\u00e1te ve\u013ea kr\u00e1snych fotografi\u00ed, ale nem\u00e1te dostatok miesta pre ich umiestnenie. Na elegantnom pevnom stojane si m\u00f4\u017eete vybra\u0165 z 12 skvel\u00fdch fotografi\u00ed. Ka\u017ed\u00fd de\u0148 si m\u00f4\u017eete vybra\u0165 in\u00fa fotografiu. N\u00e1v\u0161teve\u00a0sa m\u00f4\u017eete pochv\u00e1li\u0165 napr\u00edklad hne\u010f v\u0161etk\u00fdmi naraz. \u010cist\u00fd dizajne s ve\u013ek\u00fdmi fotkami po celej ploche ktor\u00e9 vynikn\u00fa\u00a0na ka\u017edom stole.<br /><br /></span></p>"
+                }
+            }
+        ]
+    },
+    "params": [
+        {
+            "id": 222706,
+            "attribute_values": {
+                "size": "12",
+                "Color": "Black",
+                "theme": "Border",
+                "Product type": "Photo Stand"
+            },
+            "attributes": [
+                {
+                    "name": "size",
+                    "display_name": "Pages",
+                    "value": {
+                        "name": "12",
+                        "display_name": "12",
+                        "additional_fields": []
+                    },
+                    "additional_fields": []
+                },
+                {
+                    "name": "theme",
+                    "display_name": "Theme",
+                    "value": {
+                        "name": "Border",
+                        "display_name": "Border",
+                        "additional_fields": []
+                    },
+                    "additional_fields": []
+                },
+                {
+                    "name": "Product type",
+                    "display_name": "Product type",
+                    "value": {
+                        "name": "Photo Stand",
+                        "display_name": "Photo Stand",
+                        "additional_fields": []
+                    },
+                    "additional_fields": []
+                },
+                {
+                    "name": "Color",
+                    "display_name": "Colors of stand",
+                    "value": {
+                        "name": "Black",
+                        "display_name": "Black stand",
+                        "additional_fields": [
+                            {
+                                "name": "thumb",
+                                "value": {
+                                    "en": "https://pbx2-blumi-cdn.getprintbox.com/media/additionalfieldimage/ae9ffd54-f4f3-4dd7-b013-4d186b1b75bb"
+                                }
+                            },
+                            {
+                                "name": "description",
+                                "value": {
+                                    "cs": "\u010cern\u00fd",
+                                    "en": "Black",
+                                    "hu": "Fekete",
+                                    "sk": "\u010cierny"
+                                }
+                            }
+                        ]
+                    },
+                    "additional_fields": []
+                }
+            ],
+            "page_count": 13,
+            "additional_page_count": 0,
+            "spine_width": null,
+            "workspace": {
+                "id": 397,
+                "name": "PhotoStand-160-225",
+                "pages": [
+                    {
+                        "id": "434",
+                        "name": "Page",
+                        "width": 210.0,
+                        "height": 148.0,
+                        "mediabox_width": 225.0,
+                        "mediabox_height": 160.0,
+                        "edge_width": {
+                            "top": 3.0,
+                            "bottom": 3.0,
+                            "left": 3.0,
+                            "right": 3.0
+                        },
+                        "safe_width": {
+                            "top": 2.0,
+                            "bottom": 2.0,
+                            "left": 2.0,
+                            "right": 2.0
+                        }
+                    }
+                ]
+            },
+            "cover_workspace": null,
+            "block_workspace": null,
+            "theme": {
+                "id": 3675,
+                "name": "Border"
+            },
+            "cover_theme": null,
+            "block_theme": null,
+            "skin": {
+                "id": 106,
+                "name": "Black string"
+            },
+            "cover_skin": null,
+            "block_skin": null,
+            "pages_settings": {
+                "id": 75,
+                "name": "12+1"
+            },
+            "custom_data": {}
+        }
+    ],
+    "instance_name": "blumi",
+    "duplicated_from": "a8a7a0f2-c794-4556-898b-2bda8b37bcd3",
+    "customer_comment": null,
+    "render_store_method": null,
+    "is_created_with_smart": false,
+    "editor_type": "web"
+}
