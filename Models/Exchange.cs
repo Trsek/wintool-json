@@ -11,5 +11,16 @@ namespace WinTool_json.Models
         public string perioda { get; set; }
         public string ZdrojovyPriecinok { get; set; }
         public string SpracovanyPriecinok { get; set; }
+
+        public int periodaInt
+        {
+            get
+            {
+                int periodaInt = 0;
+                Int32.TryParse(perioda, out periodaInt);
+
+                return periodaInt;
+            }
+        }
     }
 }

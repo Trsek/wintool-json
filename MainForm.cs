@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using WinTool_json.Models;
@@ -8,9 +9,11 @@ namespace WinTool_json
 {
     public partial class MainForm : Form
     {
-        Proces vybranyProces = null;
+        const string xmlFilename = "wintool.xml";
+
         Exchange xmle = new Exchange();
-        string xmlFilename = "wintool.xml";
+        Proces vybranyProces = null;
+        Thread thr = null;
 
         public MainForm()
         {
@@ -19,6 +22,14 @@ namespace WinTool_json
 
             vybranyProces = (Proces)procesBindingSource.List?[0];
             viewPodmienky();
+
+            // spustim thread
+            checkBoxSpustene.Checked = true;
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            checkBoxSpustene.Checked = false;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -49,6 +60,11 @@ namespace WinTool_json
         {
             viewPodmienky();
             Serialize();
+
+            // reinicializovat Spracovanie
+            checkBoxSpustene.Checked = false;
+            Thread.Sleep(500);
+            checkBoxSpustene.Checked = true;
         }
 
         private void Serialize()
@@ -151,13 +167,28 @@ namespace WinTool_json
 
             // nastavim nove podla vybranyProces.id
             podmienkyBindingSource.List.Clear();
+
             foreach (Podmienky onePodmienka in xmle.podmienky.FindAll(t => t.id_proces == vybranyProces.id))
-            {
                 podmienkyBindingSource.List.Add(onePodmienka);
-            }
         }
 
-        //string jsonString = File.ReadAllText(@"Test\2112829x18x18972x1x24\2112829x18x18972x1x24xinfo.json");
-        //JsonValue json = JsonValue.Parse(jsonString);
+        private void checkBoxSpustene_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSpustene.Checked)
+            {
+                Spracovanie spracovanie = new Spracovanie();
+                spracovanie.labelSpracovavam = labelSpracovavam;
+                spracovanie.progressBar = progressBar;
+                spracovanie.xmlFilename = xmlFilename;
+
+                thr = new Thread(new ThreadStart(spracovanie.Start));
+                thr.Start();
+            }
+            else
+            {
+                thr?.Abort();
+                thr = null;
+            }
+        }
     }
 }

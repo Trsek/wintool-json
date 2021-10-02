@@ -484,6 +484,7 @@ namespace WinTool_json
             this.checkBoxSpustene.TabIndex = 18;
             this.checkBoxSpustene.Text = "Spustené";
             this.checkBoxSpustene.UseVisualStyleBackColor = true;
+            this.checkBoxSpustene.CheckedChanged += new System.EventHandler(this.checkBoxSpustene_CheckedChanged);
             // 
             // labelCopyright
             // 
@@ -618,6 +619,7 @@ namespace WinTool_json
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "WinTool-JSON";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorProcesy)).EndInit();
             this.bindingNavigatorProcesy.ResumeLayout(false);
