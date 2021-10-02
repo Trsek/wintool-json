@@ -70,12 +70,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\ControlExtensions.cs" />
+    <Compile Include="Models\Exchange.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Podmienky.cs" />
+    <Compile Include="Models\Proces.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
@@ -84,6 +88,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\WinTool_json.Models.Podmienky.datasource" />
+    <None Include="Properties\DataSources\WinTool_json.Models.Proces.datasource" />
     <None Include="Test\2112829x18x18972x1x24\2112829x18x18972x1x24xef726533-f05a-4adf-b61d-11b265979d8c_cover.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

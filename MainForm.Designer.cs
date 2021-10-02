@@ -70,24 +70,40 @@ namespace WinTool_json
             this.textBoxPerioda = new System.Windows.Forms.TextBox();
             this.checkBoxSpustene = new System.Windows.Forms.CheckBox();
             this.labelCopyright = new System.Windows.Forms.Label();
+            this.textBoxZdrojovyPriecinok = new System.Windows.Forms.TextBox();
+            this.textBoxSpracovanyPriecinok = new System.Windows.Forms.TextBox();
+            this.labelZdrojovyPriecinok = new System.Windows.Forms.Label();
+            this.labelSpracovanyPriecinok = new System.Windows.Forms.Label();
+            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.podmienkyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idprocesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parameterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hodnotaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funkciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.procesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorProcesy)).BeginInit();
             this.bindingNavigatorProcesy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProcesy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPodmienky)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorPodmienky)).BeginInit();
             this.bindingNavigatorPodmienky.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.podmienkyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.procesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonUlozit
             // 
             this.buttonUlozit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonUlozit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonUlozit.Location = new System.Drawing.Point(837, 437);
+            this.buttonUlozit.Location = new System.Drawing.Point(873, 483);
             this.buttonUlozit.Name = "buttonUlozit";
-            this.buttonUlozit.Size = new System.Drawing.Size(120, 54);
+            this.buttonUlozit.Size = new System.Drawing.Size(120, 63);
             this.buttonUlozit.TabIndex = 0;
             this.buttonUlozit.Text = "&Uložiť";
             this.buttonUlozit.UseVisualStyleBackColor = true;
+            this.buttonUlozit.Click += new System.EventHandler(this.buttonUlozit_Click);
             // 
             // notifyIcon
             // 
@@ -102,15 +118,16 @@ namespace WinTool_json
             // 
             this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar.Location = new System.Drawing.Point(12, 557);
+            this.progressBar.Location = new System.Drawing.Point(12, 583);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(945, 23);
+            this.progressBar.Size = new System.Drawing.Size(981, 23);
             this.progressBar.TabIndex = 1;
             // 
             // bindingNavigatorProcesy
             // 
             this.bindingNavigatorProcesy.AddNewItem = this.bindingNavigatorAddNewItem;
             this.bindingNavigatorProcesy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bindingNavigatorProcesy.BindingSource = this.procesBindingSource;
             this.bindingNavigatorProcesy.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigatorProcesy.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigatorProcesy.Dock = System.Windows.Forms.DockStyle.None;
@@ -126,7 +143,7 @@ namespace WinTool_json
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem});
-            this.bindingNavigatorProcesy.Location = new System.Drawing.Point(12, 494);
+            this.bindingNavigatorProcesy.Location = new System.Drawing.Point(13, 414);
             this.bindingNavigatorProcesy.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigatorProcesy.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigatorProcesy.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -227,27 +244,44 @@ namespace WinTool_json
             // 
             this.dataGridViewProcesy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridViewProcesy.AutoGenerateColumns = false;
             this.dataGridViewProcesy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProcesy.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nazovDataGridViewTextBoxColumn});
+            this.dataGridViewProcesy.DataSource = this.procesBindingSource;
             this.dataGridViewProcesy.Location = new System.Drawing.Point(12, 43);
             this.dataGridViewProcesy.Name = "dataGridViewProcesy";
-            this.dataGridViewProcesy.Size = new System.Drawing.Size(281, 448);
+            this.dataGridViewProcesy.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewProcesy.Size = new System.Drawing.Size(281, 368);
             this.dataGridViewProcesy.TabIndex = 6;
+            this.dataGridViewProcesy.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProcesy_CellClick);
+            this.dataGridViewProcesy.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridViewProcesy_RowValidating);
             // 
             // dataGridViewPodmienky
             // 
             this.dataGridViewPodmienky.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewPodmienky.AutoGenerateColumns = false;
             this.dataGridViewPodmienky.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPodmienky.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idprocesDataGridViewTextBoxColumn,
+            this.parameterDataGridViewTextBoxColumn,
+            this.hodnotaDataGridViewTextBoxColumn,
+            this.funkciaDataGridViewTextBoxColumn});
+            this.dataGridViewPodmienky.DataSource = this.podmienkyBindingSource;
             this.dataGridViewPodmienky.Location = new System.Drawing.Point(346, 43);
             this.dataGridViewPodmienky.Name = "dataGridViewPodmienky";
-            this.dataGridViewPodmienky.Size = new System.Drawing.Size(461, 448);
+            this.dataGridViewPodmienky.Size = new System.Drawing.Size(497, 368);
             this.dataGridViewPodmienky.TabIndex = 7;
+            this.dataGridViewPodmienky.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridViewPodmienky_RowValidating);
             // 
             // bindingNavigatorPodmienky
             // 
             this.bindingNavigatorPodmienky.AddNewItem = this.toolStripButton1;
             this.bindingNavigatorPodmienky.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bindingNavigatorPodmienky.BindingSource = this.podmienkyBindingSource;
             this.bindingNavigatorPodmienky.CountItem = this.toolStripLabel1;
             this.bindingNavigatorPodmienky.DeleteItem = this.toolStripButton2;
             this.bindingNavigatorPodmienky.Dock = System.Windows.Forms.DockStyle.None;
@@ -263,7 +297,7 @@ namespace WinTool_json
             this.toolStripSeparator3,
             this.toolStripButton1,
             this.toolStripButton2});
-            this.bindingNavigatorPodmienky.Location = new System.Drawing.Point(346, 494);
+            this.bindingNavigatorPodmienky.Location = new System.Drawing.Point(346, 414);
             this.bindingNavigatorPodmienky.MoveFirstItem = this.toolStripButton3;
             this.bindingNavigatorPodmienky.MoveLastItem = this.toolStripButton6;
             this.bindingNavigatorPodmienky.MoveNextItem = this.toolStripButton5;
@@ -381,7 +415,7 @@ namespace WinTool_json
             // buttonUmiestnitPDF
             // 
             this.buttonUmiestnitPDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonUmiestnitPDF.Location = new System.Drawing.Point(687, 494);
+            this.buttonUmiestnitPDF.Location = new System.Drawing.Point(723, 414);
             this.buttonUmiestnitPDF.Name = "buttonUmiestnitPDF";
             this.buttonUmiestnitPDF.Size = new System.Drawing.Size(120, 25);
             this.buttonUmiestnitPDF.TabIndex = 11;
@@ -391,29 +425,31 @@ namespace WinTool_json
             // buttonZdrojovyPriecinok
             // 
             this.buttonZdrojovyPriecinok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonZdrojovyPriecinok.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonZdrojovyPriecinok.Location = new System.Drawing.Point(837, 295);
+            this.buttonZdrojovyPriecinok.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonZdrojovyPriecinok.Location = new System.Drawing.Point(808, 478);
             this.buttonZdrojovyPriecinok.Name = "buttonZdrojovyPriecinok";
-            this.buttonZdrojovyPriecinok.Size = new System.Drawing.Size(120, 54);
+            this.buttonZdrojovyPriecinok.Size = new System.Drawing.Size(35, 28);
             this.buttonZdrojovyPriecinok.TabIndex = 12;
-            this.buttonZdrojovyPriecinok.Text = "&Zdrojový priečinok";
+            this.buttonZdrojovyPriecinok.Text = "...";
             this.buttonZdrojovyPriecinok.UseVisualStyleBackColor = true;
+            this.buttonZdrojovyPriecinok.Click += new System.EventHandler(this.buttonZdrojovyPriecinok_Click);
             // 
             // buttonSpracovanyPriecinok
             // 
             this.buttonSpracovanyPriecinok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSpracovanyPriecinok.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonSpracovanyPriecinok.Location = new System.Drawing.Point(837, 367);
+            this.buttonSpracovanyPriecinok.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonSpracovanyPriecinok.Location = new System.Drawing.Point(808, 518);
             this.buttonSpracovanyPriecinok.Name = "buttonSpracovanyPriecinok";
-            this.buttonSpracovanyPriecinok.Size = new System.Drawing.Size(120, 54);
+            this.buttonSpracovanyPriecinok.Size = new System.Drawing.Size(35, 28);
             this.buttonSpracovanyPriecinok.TabIndex = 13;
-            this.buttonSpracovanyPriecinok.Text = "&Spracovaný priečinok";
+            this.buttonSpracovanyPriecinok.Text = "...";
             this.buttonSpracovanyPriecinok.UseVisualStyleBackColor = true;
+            this.buttonSpracovanyPriecinok.Click += new System.EventHandler(this.buttonSpracovanyPriecinok_Click);
             // 
             // labelSpracovavam
             // 
             this.labelSpracovavam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelSpracovavam.Location = new System.Drawing.Point(12, 541);
+            this.labelSpracovavam.Location = new System.Drawing.Point(12, 567);
             this.labelSpracovavam.Name = "labelSpracovavam";
             this.labelSpracovavam.Size = new System.Drawing.Size(945, 13);
             this.labelSpracovavam.TabIndex = 14;
@@ -423,7 +459,7 @@ namespace WinTool_json
             // 
             this.labelPerioda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPerioda.AutoSize = true;
-            this.labelPerioda.Location = new System.Drawing.Point(834, 43);
+            this.labelPerioda.Location = new System.Drawing.Point(870, 43);
             this.labelPerioda.Name = "labelPerioda";
             this.labelPerioda.Size = new System.Drawing.Size(116, 13);
             this.labelPerioda.TabIndex = 16;
@@ -432,7 +468,7 @@ namespace WinTool_json
             // textBoxPerioda
             // 
             this.textBoxPerioda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPerioda.Location = new System.Drawing.Point(837, 59);
+            this.textBoxPerioda.Location = new System.Drawing.Point(873, 59);
             this.textBoxPerioda.Name = "textBoxPerioda";
             this.textBoxPerioda.Size = new System.Drawing.Size(113, 20);
             this.textBoxPerioda.TabIndex = 17;
@@ -442,7 +478,7 @@ namespace WinTool_json
             // 
             this.checkBoxSpustene.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxSpustene.AutoSize = true;
-            this.checkBoxSpustene.Location = new System.Drawing.Point(837, 94);
+            this.checkBoxSpustene.Location = new System.Drawing.Point(873, 94);
             this.checkBoxSpustene.Name = "checkBoxSpustene";
             this.checkBoxSpustene.Size = new System.Drawing.Size(71, 17);
             this.checkBoxSpustene.TabIndex = 18;
@@ -453,7 +489,7 @@ namespace WinTool_json
             // 
             this.labelCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCopyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelCopyright.Location = new System.Drawing.Point(12, 587);
+            this.labelCopyright.Location = new System.Drawing.Point(48, 613);
             this.labelCopyright.Name = "labelCopyright";
             this.labelCopyright.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelCopyright.Size = new System.Drawing.Size(945, 13);
@@ -461,11 +497,108 @@ namespace WinTool_json
             this.labelCopyright.Text = "Software by Zdenko Sekerák, www.trsek.com";
             this.labelCopyright.Click += new System.EventHandler(this.labelCopyright_Click);
             // 
+            // textBoxZdrojovyPriecinok
+            // 
+            this.textBoxZdrojovyPriecinok.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxZdrojovyPriecinok.Location = new System.Drawing.Point(12, 483);
+            this.textBoxZdrojovyPriecinok.Name = "textBoxZdrojovyPriecinok";
+            this.textBoxZdrojovyPriecinok.Size = new System.Drawing.Size(790, 20);
+            this.textBoxZdrojovyPriecinok.TabIndex = 20;
+            // 
+            // textBoxSpracovanyPriecinok
+            // 
+            this.textBoxSpracovanyPriecinok.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSpracovanyPriecinok.Location = new System.Drawing.Point(12, 523);
+            this.textBoxSpracovanyPriecinok.Name = "textBoxSpracovanyPriecinok";
+            this.textBoxSpracovanyPriecinok.Size = new System.Drawing.Size(790, 20);
+            this.textBoxSpracovanyPriecinok.TabIndex = 21;
+            // 
+            // labelZdrojovyPriecinok
+            // 
+            this.labelZdrojovyPriecinok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelZdrojovyPriecinok.AutoSize = true;
+            this.labelZdrojovyPriecinok.Location = new System.Drawing.Point(12, 467);
+            this.labelZdrojovyPriecinok.Name = "labelZdrojovyPriecinok";
+            this.labelZdrojovyPriecinok.Size = new System.Drawing.Size(94, 13);
+            this.labelZdrojovyPriecinok.TabIndex = 22;
+            this.labelZdrojovyPriecinok.Text = "Zdrojový priečinok";
+            // 
+            // labelSpracovanyPriecinok
+            // 
+            this.labelSpracovanyPriecinok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelSpracovanyPriecinok.AutoSize = true;
+            this.labelSpracovanyPriecinok.Location = new System.Drawing.Point(12, 507);
+            this.labelSpracovanyPriecinok.Name = "labelSpracovanyPriecinok";
+            this.labelSpracovanyPriecinok.Size = new System.Drawing.Size(110, 13);
+            this.labelSpracovanyPriecinok.TabIndex = 23;
+            this.labelSpracovanyPriecinok.Text = "Spracovaný priečinok";
+            // 
+            // folderBrowserDialog
+            // 
+            this.folderBrowserDialog.Description = "Vyber adresar";
+            // 
+            // podmienkyBindingSource
+            // 
+            this.podmienkyBindingSource.DataSource = typeof(WinTool_json.Models.Podmienky);
+            // 
+            // idprocesDataGridViewTextBoxColumn
+            // 
+            this.idprocesDataGridViewTextBoxColumn.DataPropertyName = "id_proces";
+            this.idprocesDataGridViewTextBoxColumn.HeaderText = "id_proces";
+            this.idprocesDataGridViewTextBoxColumn.Name = "idprocesDataGridViewTextBoxColumn";
+            this.idprocesDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // parameterDataGridViewTextBoxColumn
+            // 
+            this.parameterDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.parameterDataGridViewTextBoxColumn.DataPropertyName = "parameter";
+            this.parameterDataGridViewTextBoxColumn.HeaderText = "Parameter";
+            this.parameterDataGridViewTextBoxColumn.Name = "parameterDataGridViewTextBoxColumn";
+            // 
+            // hodnotaDataGridViewTextBoxColumn
+            // 
+            this.hodnotaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.hodnotaDataGridViewTextBoxColumn.DataPropertyName = "hodnota";
+            this.hodnotaDataGridViewTextBoxColumn.HeaderText = "Hodnota";
+            this.hodnotaDataGridViewTextBoxColumn.Name = "hodnotaDataGridViewTextBoxColumn";
+            // 
+            // funkciaDataGridViewTextBoxColumn
+            // 
+            this.funkciaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.funkciaDataGridViewTextBoxColumn.DataPropertyName = "funkcia";
+            this.funkciaDataGridViewTextBoxColumn.HeaderText = "Funkcia";
+            this.funkciaDataGridViewTextBoxColumn.Name = "funkciaDataGridViewTextBoxColumn";
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nazovDataGridViewTextBoxColumn
+            // 
+            this.nazovDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nazovDataGridViewTextBoxColumn.DataPropertyName = "nazov";
+            this.nazovDataGridViewTextBoxColumn.HeaderText = "Názov";
+            this.nazovDataGridViewTextBoxColumn.Name = "nazovDataGridViewTextBoxColumn";
+            // 
+            // procesBindingSource
+            // 
+            this.procesBindingSource.DataSource = typeof(WinTool_json.Models.Proces);
+            this.procesBindingSource.Filter = "";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(969, 603);
+            this.ClientSize = new System.Drawing.Size(1005, 629);
+            this.Controls.Add(this.labelSpracovanyPriecinok);
+            this.Controls.Add(this.labelZdrojovyPriecinok);
+            this.Controls.Add(this.textBoxSpracovanyPriecinok);
+            this.Controls.Add(this.textBoxZdrojovyPriecinok);
             this.Controls.Add(this.labelCopyright);
             this.Controls.Add(this.checkBoxSpustene);
             this.Controls.Add(this.textBoxPerioda);
@@ -494,6 +627,8 @@ namespace WinTool_json
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorPodmienky)).EndInit();
             this.bindingNavigatorPodmienky.ResumeLayout(false);
             this.bindingNavigatorPodmienky.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.podmienkyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.procesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -540,6 +675,19 @@ namespace WinTool_json
         private System.Windows.Forms.TextBox textBoxPerioda;
         private System.Windows.Forms.CheckBox checkBoxSpustene;
         private System.Windows.Forms.Label labelCopyright;
+        private System.Windows.Forms.TextBox textBoxZdrojovyPriecinok;
+        private System.Windows.Forms.TextBox textBoxSpracovanyPriecinok;
+        private System.Windows.Forms.Label labelZdrojovyPriecinok;
+        private System.Windows.Forms.Label labelSpracovanyPriecinok;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
+        private System.Windows.Forms.BindingSource procesBindingSource;
+        private System.Windows.Forms.BindingSource podmienkyBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazovDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idprocesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn parameterDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hodnotaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn funkciaDataGridViewTextBoxColumn;
     }
 }
 
