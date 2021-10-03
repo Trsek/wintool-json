@@ -149,6 +149,9 @@ namespace WinTool_json
                     Thread.Sleep(CakajNaOpakuj * 1000);
                 }
 
+                Directory.CreateDirectory(xmle.ZdrojovyPriecinok);
+                Directory.CreateDirectory(xmle.SpracovanyPriecinok);
+
                 Step();
                 List<string> subory = new List<string>();
                 DateTime dtZaciatok = TimeStampExchange(DateTime.MinValue, false);
