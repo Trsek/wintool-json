@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace WinTool_json.Models
 {
-    [Serializable()]
+    [Serializable]
     public class Exchange
     {
         public List<Proces> proces { get; set; }

@@ -16,7 +16,7 @@
     "store": "default_store",
     "order": {
         "number": "blumi_2901",
-        "quantity": 1,
+        "quantity": 3,
         "status": 1,
         "create_time": "2021-09-08T19:39:08.270743+02:00",
         "payment_time": "2021-09-08T19:40:08.954251+02:00",

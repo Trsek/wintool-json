@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Json;
 using System.Threading;
 using System.Windows.Forms;
 using System.Xml.Serialization;
@@ -182,8 +183,28 @@ namespace WinTool_json
         public void Spracuj(string subor)
         {
             Thread.Sleep(500);
-            //string jsonString = File.ReadAllText(@"Test\2112829x18x18972x1x24\2112829x18x18972x1x24xinfo.json");
-            //JsonValue json = JsonValue.Parse(jsonString);
+            JsonValue json = JsonValue.Parse(File.ReadAllText(subor));
+
+            string nazov = (string)json["id"];
+            int quantity = (int)json["order"]["quantity"];
+
+            foreach (FileSystemInfo file in new DirectoryInfo(Path.GetDirectoryName(subor)).GetFiles("*.pdf", SearchOption.AllDirectories))
+            {
+                if (file.Name.Contains(nazov))
+                {
+                    // urobim X kopii
+                    for (int i=0; i < quantity; i++)
+                    {
+                        string fileCiel = xmle.SpracovanyPriecinok + "\\"
+                            + Path.GetFileNameWithoutExtension(file.FullName)
+                            + ((i > 0) ? ("_" + i.ToString("D3")) : "")
+                            + Path.GetExtension(file.FullName);
+
+                        if (!File.Exists(fileCiel))
+                            File.Copy(file.FullName, fileCiel);
+                    }
+                }
+            }
 
             OdsunSpracovanySubor(subor);
         }
