@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Json;
 using System.Threading;
 using System.Windows.Forms;
 using System.Xml.Serialization;
@@ -25,6 +26,7 @@ namespace WinTool_json
                 vybranyProces = (Proces)procesBindingSource.List[0];
 
             viewPodmienky();
+            NacitajExample("example.json");
 
             // spustim thread
             checkBoxSpustene.Checked = true;
@@ -85,6 +87,45 @@ namespace WinTool_json
                 parameter = Podmienky.CESTA_PDF,
                 hodnota = textBoxUmiesteniePDF.Text
             });
+        }
+
+        private void FillPrikladyValuePair(KeyValuePair<string, JsonValue> json, string parent)
+        {
+            try
+            {
+                if ((json.Value?.JsonType == JsonType.Array)
+                 || (json.Value?.JsonType == JsonType.Object))
+                {
+                    foreach (KeyValuePair<string, JsonValue> json_part in json.Value)
+                        FillPrikladyValuePair(json_part, parent + "{" + json_part.Key + "} ");
+
+                    return;
+                }
+
+                prikladyBindingSource.List.Add(new Priklady()
+                {
+                    parameter = parent,
+                    hodnota = json.Value?.ToString(),
+                });
+            }
+            catch { }
+        }
+
+        private void NacitajExample(string FileName)
+        {
+            prikladyBindingSource.List.Clear();
+
+            if (File.Exists(FileName))
+            {
+                foreach (KeyValuePair<string, JsonValue> json in JsonValue.Parse(File.ReadAllText(FileName)))
+                    FillPrikladyValuePair(json, "{" + json.Key + "} ");
+            }
+        }
+
+        private void buttonVyberPriklad_Click(object sender, EventArgs e)
+        {
+            openFileDialog.ShowDialog();
+            NacitajExample(openFileDialog.FileName);
         }
 
         private void textBoxUmiesteniePDF_TextChanged(object sender, EventArgs e)
@@ -184,6 +225,17 @@ namespace WinTool_json
         {
             vybranyProces = dataGridViewProcesy.SelectedRows[0].DataBoundItem as Proces;
             viewPodmienky();
+        }
+
+        private void dataGridViewPriklad_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Priklady vybranyPriklad = dataGridViewPriklady.SelectedRows[0].DataBoundItem as Priklady;
+
+            if (dataGridViewPodmienky.SelectedCells.Count == 1)
+                dataGridViewPodmienky.SelectedCells[0].Value = vybranyPriklad.parameter;
+
+            if (dataGridViewPodmienky.SelectedCells.Count > 1)
+                dataGridViewPodmienky.SelectedCells[1].Value = vybranyPriklad.parameter;
         }
 
         private int GetIdPodmienok()
