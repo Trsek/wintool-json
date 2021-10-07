@@ -141,42 +141,49 @@ namespace WinTool_json
         {
             while (true)
             {
-                BarValue(0);
-                Info("Analyzujem nastavenia v " + xmlFilename);
-                while (!Deserialize())
+                try
                 {
-                    Info("Chyba, snazim sa znova prečitať " + xmlFilename);
-                    Thread.Sleep(CakajNaOpakuj * 1000);
-                }
+                    BarValue(0);
+                    Info("Analyzujem nastavenia v " + xmlFilename);
+                    while (!Deserialize())
+                    {
+                        Info("Chyba, snazim sa znova prečitať " + xmlFilename);
+                        Thread.Sleep(CakajNaOpakuj * 1000);
+                    }
 
-                Directory.CreateDirectory(xmle.ZdrojovyPriecinok);
-                Directory.CreateDirectory(xmle.SpracovanyPriecinok);
+                    Directory.CreateDirectory(xmle.ZdrojovyPriecinok);
+                    Directory.CreateDirectory(xmle.SpracovanyPriecinok);
 
-                Step();
-                List<string> subory = new List<string>();
-                DateTime dtZaciatok = TimeStampExchange(DateTime.MinValue, false);
-
-                foreach (DirectoryInfo adresar in new DirectoryInfo(xmle.ZdrojovyPriecinok).GetDirectories())
-                {
-                    Info("Zisťujem počet súborov v " + adresar.FullName);
                     Step();
-                    subory.AddRange(ZoznamSubory(adresar.FullName, dtZaciatok));
-                    Thread.Sleep(500);
-                }
+                    List<string> subory = new List<string>();
+                    DateTime dtZaciatok = TimeStampExchange(DateTime.MinValue, false);
 
-                TimeStampExchange(DateTime.Now, true);
-                BarValue(0);
-                BarMaximum(subory.Count);
-                foreach (string subor in subory)
+                    foreach (DirectoryInfo adresar in new DirectoryInfo(xmle.ZdrojovyPriecinok).GetDirectories())
+                    {
+                        Info("Zisťujem počet súborov v " + adresar.FullName);
+                        Step();
+                        subory.AddRange(ZoznamSubory(adresar.FullName, dtZaciatok));
+                        Thread.Sleep(500);
+                    }
+
+                    TimeStampExchange(DateTime.Now, true);
+                    BarValue(0);
+                    BarMaximum(subory.Count);
+                    foreach (string subor in subory)
+                    {
+                        Info("Spracúvavám " + subor);
+                        Step();
+                        Spracuj(subor);
+                    }
+
+                    Info("Koniec");
+                    BarMaximum(100);
+                    BarValue(100);
+                }
+                catch (Exception ex)
                 {
-                    Info("Spracúvavám " + subor);
-                    Step();
-                    Spracuj(subor);
+                    Info("Chyba: " + ex.Message);
                 }
-
-                Info("Koniec");
-                BarMaximum(100);
-                BarValue(100);
 
                 // nakoniec pockame pred dalsim spustenim
                 Thread.Sleep(xmle.periodaInt * 1000);
@@ -187,6 +194,7 @@ namespace WinTool_json
         {
             Thread.Sleep(500);
             JsonValue json = JsonValue.Parse(File.ReadAllText(subor));
+            string PDFPrecinok = xmle.podmienky.Find(t => t.parameter == Podmienky.CESTA_PDF).hodnota;
 
             string nazov = (string)json["id"];
             int quantity = (int)json["order"]["quantity"];
@@ -196,9 +204,9 @@ namespace WinTool_json
                 if (file.Name.Contains(nazov))
                 {
                     // urobim X kopii
-                    for (int i=0; i < quantity; i++)
+                    for (int i = 0; i < quantity; i++)
                     {
-                        string fileCiel = xmle.SpracovanyPriecinok + "\\"
+                        string fileCiel = PDFPrecinok + "\\"
                             + Path.GetFileNameWithoutExtension(file.FullName)
                             + ((i > 0) ? ("_" + i.ToString("D3")) : "")
                             + Path.GetExtension(file.FullName);

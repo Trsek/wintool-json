@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
@@ -12,7 +13,7 @@ namespace WinTool_json
         const string xmlFilename = "wintool.xml";
 
         Exchange xmle = new Exchange();
-        Proces vybranyProces = null;
+        Proces vybranyProces = new Proces();
         Thread thr = null;
 
         public MainForm()
@@ -20,7 +21,9 @@ namespace WinTool_json
             InitializeComponent();
             Deserialize();
 
-            vybranyProces = (Proces)procesBindingSource.List?[0];
+            if (procesBindingSource.List.Count > 0)
+                vybranyProces = (Proces)procesBindingSource.List[0];
+
             viewPodmienky();
 
             // spustim thread
@@ -42,6 +45,14 @@ namespace WinTool_json
             System.Diagnostics.Process.Start("https://trsek.com/curriculum");
         }
 
+        private void buttonUmiestnitPDF_Click(object sender, EventArgs e)
+        {
+            folderBrowserDialog.SelectedPath = textBoxUmiesteniePDF.Text;
+            folderBrowserDialog.ShowDialog();
+            textBoxUmiesteniePDF.Text = folderBrowserDialog.SelectedPath;
+            UpdatePDFPodmienky();
+        }
+
         private void buttonZdrojovyPriecinok_Click(object sender, EventArgs e)
         {
             folderBrowserDialog.SelectedPath = textBoxZdrojovyPriecinok.Text;
@@ -54,6 +65,31 @@ namespace WinTool_json
             folderBrowserDialog.SelectedPath = textBoxSpracovanyPriecinok.Text;
             folderBrowserDialog.ShowDialog();
             textBoxSpracovanyPriecinok.Text = folderBrowserDialog.SelectedPath;
+        }
+
+        private void UpdatePDFPodmienky()
+        {
+            foreach (Podmienky onePodmienka in podmienkyBindingSource.List)
+            {
+                if (onePodmienka.parameter == Podmienky.CESTA_PDF)
+                {
+                    onePodmienka.hodnota = textBoxUmiesteniePDF.Text;
+                    podmienkyBindingSource.ResetBindings(true);
+                    return;
+                }
+            }
+
+            podmienkyBindingSource.List.Add(new Podmienky()
+            {
+                id_proces = GetIdPodmienok(),
+                parameter = Podmienky.CESTA_PDF,
+                hodnota = textBoxUmiesteniePDF.Text
+            });
+        }
+
+        private void textBoxUmiesteniePDF_TextChanged(object sender, EventArgs e)
+        {
+            UpdatePDFPodmienky();
         }
 
         private void buttonUlozit_Click(object sender, EventArgs e)
@@ -107,7 +143,7 @@ namespace WinTool_json
             textBoxSpracovanyPriecinok.Text = xmle.SpracovanyPriecinok;
 
             procesBindingSource.List.Clear();
-            foreach (Proces oneProces in xmle.proces)
+            foreach (Proces oneProces in xmle.proces ?? new List<Proces>())
                 procesBindingSource.List.Add(oneProces);
         }
 
@@ -150,18 +186,21 @@ namespace WinTool_json
             viewPodmienky();
         }
 
+        private int GetIdPodmienok()
+        {
+            if (podmienkyBindingSource.List.Count > 0)
+                return ((Podmienky)podmienkyBindingSource.List[0]).id_proces;
+
+            return 0;
+        }
+
         private void viewPodmienky()
         {
             if (vybranyProces == null)
                 return;
 
-            int oldId = 0;
-            if (podmienkyBindingSource.List.Count > 0)
-                oldId = ((Podmienky)podmienkyBindingSource.List[0]).id_proces;
-
             // zmazem stare
-            xmle.podmienky.RemoveAll(p => p.id_proces == oldId);
-
+            xmle.podmienky.RemoveAll(p => p.id_proces == GetIdPodmienok());
             foreach (Podmienky onePodmienka in podmienkyBindingSource.List)
                 xmle.podmienky.Add(onePodmienka);
 
@@ -170,6 +209,9 @@ namespace WinTool_json
 
             foreach (Podmienky onePodmienka in xmle.podmienky.FindAll(t => t.id_proces == vybranyProces.id))
                 podmienkyBindingSource.List.Add(onePodmienka);
+
+            // aka je cesta?
+            textBoxUmiesteniePDF.Text = xmle.podmienky.Find(t => t.parameter == Podmienky.CESTA_PDF)?.hodnota;
         }
 
         private void checkBoxSpustene_CheckedChanged(object sender, EventArgs e)

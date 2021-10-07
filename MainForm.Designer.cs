@@ -75,6 +75,7 @@ namespace WinTool_json
             this.labelZdrojovyPriecinok = new System.Windows.Forms.Label();
             this.labelSpracovanyPriecinok = new System.Windows.Forms.Label();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.textBoxUmiesteniePDF = new System.Windows.Forms.TextBox();
             this.podmienkyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idprocesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.parameterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,7 +98,7 @@ namespace WinTool_json
             // 
             this.buttonUlozit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonUlozit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonUlozit.Location = new System.Drawing.Point(873, 483);
+            this.buttonUlozit.Location = new System.Drawing.Point(873, 531);
             this.buttonUlozit.Name = "buttonUlozit";
             this.buttonUlozit.Size = new System.Drawing.Size(120, 63);
             this.buttonUlozit.TabIndex = 0;
@@ -118,7 +119,7 @@ namespace WinTool_json
             // 
             this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar.Location = new System.Drawing.Point(12, 583);
+            this.progressBar.Location = new System.Drawing.Point(12, 631);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(981, 23);
             this.progressBar.TabIndex = 1;
@@ -143,7 +144,7 @@ namespace WinTool_json
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem});
-            this.bindingNavigatorProcesy.Location = new System.Drawing.Point(13, 414);
+            this.bindingNavigatorProcesy.Location = new System.Drawing.Point(13, 462);
             this.bindingNavigatorProcesy.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigatorProcesy.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigatorProcesy.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -253,7 +254,7 @@ namespace WinTool_json
             this.dataGridViewProcesy.Location = new System.Drawing.Point(12, 43);
             this.dataGridViewProcesy.Name = "dataGridViewProcesy";
             this.dataGridViewProcesy.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewProcesy.Size = new System.Drawing.Size(281, 368);
+            this.dataGridViewProcesy.Size = new System.Drawing.Size(281, 416);
             this.dataGridViewProcesy.TabIndex = 6;
             this.dataGridViewProcesy.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProcesy_CellClick);
             this.dataGridViewProcesy.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridViewProcesy_RowValidating);
@@ -273,7 +274,7 @@ namespace WinTool_json
             this.dataGridViewPodmienky.DataSource = this.podmienkyBindingSource;
             this.dataGridViewPodmienky.Location = new System.Drawing.Point(346, 43);
             this.dataGridViewPodmienky.Name = "dataGridViewPodmienky";
-            this.dataGridViewPodmienky.Size = new System.Drawing.Size(497, 368);
+            this.dataGridViewPodmienky.Size = new System.Drawing.Size(497, 390);
             this.dataGridViewPodmienky.TabIndex = 7;
             this.dataGridViewPodmienky.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridViewPodmienky_RowValidating);
             // 
@@ -297,7 +298,7 @@ namespace WinTool_json
             this.toolStripSeparator3,
             this.toolStripButton1,
             this.toolStripButton2});
-            this.bindingNavigatorPodmienky.Location = new System.Drawing.Point(346, 414);
+            this.bindingNavigatorPodmienky.Location = new System.Drawing.Point(346, 462);
             this.bindingNavigatorPodmienky.MoveFirstItem = this.toolStripButton3;
             this.bindingNavigatorPodmienky.MoveLastItem = this.toolStripButton6;
             this.bindingNavigatorPodmienky.MoveNextItem = this.toolStripButton5;
@@ -415,18 +416,19 @@ namespace WinTool_json
             // buttonUmiestnitPDF
             // 
             this.buttonUmiestnitPDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonUmiestnitPDF.Location = new System.Drawing.Point(723, 414);
+            this.buttonUmiestnitPDF.Location = new System.Drawing.Point(754, 436);
             this.buttonUmiestnitPDF.Name = "buttonUmiestnitPDF";
-            this.buttonUmiestnitPDF.Size = new System.Drawing.Size(120, 25);
+            this.buttonUmiestnitPDF.Size = new System.Drawing.Size(89, 25);
             this.buttonUmiestnitPDF.TabIndex = 11;
-            this.buttonUmiestnitPDF.Text = "Umiestniť &PDF do ...";
+            this.buttonUmiestnitPDF.Text = "Umiestniť &PDF";
             this.buttonUmiestnitPDF.UseVisualStyleBackColor = true;
+            this.buttonUmiestnitPDF.Click += new System.EventHandler(this.buttonUmiestnitPDF_Click);
             // 
             // buttonZdrojovyPriecinok
             // 
             this.buttonZdrojovyPriecinok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonZdrojovyPriecinok.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonZdrojovyPriecinok.Location = new System.Drawing.Point(808, 478);
+            this.buttonZdrojovyPriecinok.Location = new System.Drawing.Point(808, 526);
             this.buttonZdrojovyPriecinok.Name = "buttonZdrojovyPriecinok";
             this.buttonZdrojovyPriecinok.Size = new System.Drawing.Size(35, 28);
             this.buttonZdrojovyPriecinok.TabIndex = 12;
@@ -438,7 +440,7 @@ namespace WinTool_json
             // 
             this.buttonSpracovanyPriecinok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSpracovanyPriecinok.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonSpracovanyPriecinok.Location = new System.Drawing.Point(808, 518);
+            this.buttonSpracovanyPriecinok.Location = new System.Drawing.Point(808, 566);
             this.buttonSpracovanyPriecinok.Name = "buttonSpracovanyPriecinok";
             this.buttonSpracovanyPriecinok.Size = new System.Drawing.Size(35, 28);
             this.buttonSpracovanyPriecinok.TabIndex = 13;
@@ -449,7 +451,7 @@ namespace WinTool_json
             // labelSpracovavam
             // 
             this.labelSpracovavam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelSpracovavam.Location = new System.Drawing.Point(12, 567);
+            this.labelSpracovavam.Location = new System.Drawing.Point(12, 615);
             this.labelSpracovavam.Name = "labelSpracovavam";
             this.labelSpracovavam.Size = new System.Drawing.Size(945, 13);
             this.labelSpracovavam.TabIndex = 14;
@@ -490,7 +492,7 @@ namespace WinTool_json
             // 
             this.labelCopyright.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCopyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelCopyright.Location = new System.Drawing.Point(48, 613);
+            this.labelCopyright.Location = new System.Drawing.Point(48, 661);
             this.labelCopyright.Name = "labelCopyright";
             this.labelCopyright.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelCopyright.Size = new System.Drawing.Size(945, 13);
@@ -502,7 +504,7 @@ namespace WinTool_json
             // 
             this.textBoxZdrojovyPriecinok.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxZdrojovyPriecinok.Location = new System.Drawing.Point(12, 483);
+            this.textBoxZdrojovyPriecinok.Location = new System.Drawing.Point(12, 531);
             this.textBoxZdrojovyPriecinok.Name = "textBoxZdrojovyPriecinok";
             this.textBoxZdrojovyPriecinok.Size = new System.Drawing.Size(790, 20);
             this.textBoxZdrojovyPriecinok.TabIndex = 20;
@@ -511,7 +513,7 @@ namespace WinTool_json
             // 
             this.textBoxSpracovanyPriecinok.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxSpracovanyPriecinok.Location = new System.Drawing.Point(12, 523);
+            this.textBoxSpracovanyPriecinok.Location = new System.Drawing.Point(12, 571);
             this.textBoxSpracovanyPriecinok.Name = "textBoxSpracovanyPriecinok";
             this.textBoxSpracovanyPriecinok.Size = new System.Drawing.Size(790, 20);
             this.textBoxSpracovanyPriecinok.TabIndex = 21;
@@ -520,7 +522,7 @@ namespace WinTool_json
             // 
             this.labelZdrojovyPriecinok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelZdrojovyPriecinok.AutoSize = true;
-            this.labelZdrojovyPriecinok.Location = new System.Drawing.Point(12, 467);
+            this.labelZdrojovyPriecinok.Location = new System.Drawing.Point(12, 515);
             this.labelZdrojovyPriecinok.Name = "labelZdrojovyPriecinok";
             this.labelZdrojovyPriecinok.Size = new System.Drawing.Size(94, 13);
             this.labelZdrojovyPriecinok.TabIndex = 22;
@@ -530,7 +532,7 @@ namespace WinTool_json
             // 
             this.labelSpracovanyPriecinok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelSpracovanyPriecinok.AutoSize = true;
-            this.labelSpracovanyPriecinok.Location = new System.Drawing.Point(12, 507);
+            this.labelSpracovanyPriecinok.Location = new System.Drawing.Point(12, 555);
             this.labelSpracovanyPriecinok.Name = "labelSpracovanyPriecinok";
             this.labelSpracovanyPriecinok.Size = new System.Drawing.Size(110, 13);
             this.labelSpracovanyPriecinok.TabIndex = 23;
@@ -539,6 +541,16 @@ namespace WinTool_json
             // folderBrowserDialog
             // 
             this.folderBrowserDialog.Description = "Vyber adresar";
+            // 
+            // textBoxUmiesteniePDF
+            // 
+            this.textBoxUmiesteniePDF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxUmiesteniePDF.Location = new System.Drawing.Point(346, 439);
+            this.textBoxUmiesteniePDF.Name = "textBoxUmiesteniePDF";
+            this.textBoxUmiesteniePDF.Size = new System.Drawing.Size(402, 20);
+            this.textBoxUmiesteniePDF.TabIndex = 24;
+            this.textBoxUmiesteniePDF.TextChanged += new System.EventHandler(this.textBoxUmiesteniePDF_TextChanged);
             // 
             // podmienkyBindingSource
             // 
@@ -595,7 +607,8 @@ namespace WinTool_json
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1005, 629);
+            this.ClientSize = new System.Drawing.Size(1005, 677);
+            this.Controls.Add(this.textBoxUmiesteniePDF);
             this.Controls.Add(this.labelSpracovanyPriecinok);
             this.Controls.Add(this.labelZdrojovyPriecinok);
             this.Controls.Add(this.textBoxSpracovanyPriecinok);
@@ -690,6 +703,7 @@ namespace WinTool_json
         private System.Windows.Forms.DataGridViewTextBoxColumn parameterDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hodnotaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn funkciaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox textBoxUmiesteniePDF;
     }
 }
 

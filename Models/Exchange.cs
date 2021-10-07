@@ -6,8 +6,8 @@ namespace WinTool_json.Models
     [Serializable]
     public class Exchange
     {
-        public List<Proces> proces { get; set; }
-        public List<Podmienky> podmienky { get; set; }
+        public List<Proces> proces { get; set; } = new List<Proces>();
+        public List<Podmienky> podmienky { get; set; } = new List<Podmienky>();
         public string perioda { get; set; }
         public string ZdrojovyPriecinok { get; set; }
         public string SpracovanyPriecinok { get; set; }
