@@ -215,7 +215,7 @@
     <PreBuildEvent>if $(ConfigurationName) == Release ("$(ProjectDir)\AssemblyInfoUtil\AssemblyInfoUtil.exe" -inc:4 "$(ProjectDir)\Properties\AssemblyInfo.cs" -save:"$(ProjectDir)\Properties\version.txt")</PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>if $(ConfigurationName) == Release (del "$(ProjectDir)\bin\Release\*.xml")
+    <PostBuildEvent>if $(ConfigurationName) == Release (del "$(ProjectDir)\bin\Release\System.Json.xml")
 if $(ConfigurationName) == Release (rmdir "$(ProjectDir)\bin\Release\Test" /S /Q)
 if $(ConfigurationName) == Release (del "$(ProjectDir)\WinTool-JSON_*.exe")
 if $(ConfigurationName) == Release (call "C:\Program Files (x86)\Inno Setup 6\Compil32.exe" /cc "$(ProjectDir)\WinTool-JSON.iss")
