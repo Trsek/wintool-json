@@ -130,7 +130,7 @@ namespace WinTool_json
             | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar.Location = new System.Drawing.Point(12, 631);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(1207, 23);
+            this.progressBar.Size = new System.Drawing.Size(1204, 23);
             this.progressBar.TabIndex = 15;
             // 
             // bindingNavigatorProcesy
@@ -513,7 +513,7 @@ namespace WinTool_json
             this.labelSpracovavam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelSpracovavam.Location = new System.Drawing.Point(12, 615);
             this.labelSpracovavam.Name = "labelSpracovavam";
-            this.labelSpracovavam.Size = new System.Drawing.Size(945, 13);
+            this.labelSpracovavam.Size = new System.Drawing.Size(1204, 13);
             this.labelSpracovavam.TabIndex = 14;
             this.labelSpracovavam.Text = "Spracovávam ...";
             // 

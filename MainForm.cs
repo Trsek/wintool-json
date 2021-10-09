@@ -73,7 +73,7 @@ namespace WinTool_json
         {
             foreach (Podmienky onePodmienka in podmienkyBindingSource.List)
             {
-                if (onePodmienka.parameter == Podmienky.CESTA_PDF)
+                if (onePodmienka.funkcia == Podmienky.CESTA_PDF)
                 {
                     onePodmienka.hodnota = textBoxUmiesteniePDF.Text;
                     podmienkyBindingSource.ResetBindings(true);
@@ -84,8 +84,8 @@ namespace WinTool_json
             podmienkyBindingSource.List.Add(new Podmienky()
             {
                 id_proces = GetIdPodmienok(),
-                parameter = Podmienky.CESTA_PDF,
-                hodnota = textBoxUmiesteniePDF.Text
+                hodnota = textBoxUmiesteniePDF.Text,
+                funkcia = Podmienky.CESTA_PDF,
             });
         }
 
@@ -194,17 +194,24 @@ namespace WinTool_json
 
             foreach (DataGridViewRow dtr in dataGridViewProcesy.Rows)
             {
-                if (dtr.Cells[0].Value != null)
+                try
                 {
-                    if ((int)dtr.Cells[0].Value > maxId)
-                        maxId = (int)dtr.Cells[0].Value;
-
-                    if ((int)dtr.Cells[0].Value == 0)
+                    if (dtr.Cells[0].Value != null)
                     {
-                        dtr.Cells[0].Value = maxId + 1;
-                        vybranyProces = dataGridViewProcesy.SelectedRows[0].DataBoundItem as Proces;
-                        viewPodmienky();
+                        if ((int)dtr.Cells[0].Value > maxId)
+                            maxId = (int)dtr.Cells[0].Value;
+
+                        if ((int)dtr.Cells[0].Value == 0)
+                        {
+                            dtr.Cells[0].Value = maxId + 1;
+                            vybranyProces = dataGridViewProcesy.SelectedRows[0].DataBoundItem as Proces;
+                            viewPodmienky();
+                        }
                     }
+                }
+                catch (Exception ex)
+                {
+                    labelSpracovavam.Text = "Chyba: " + ex.Message;
                 }
             }
         }
@@ -213,10 +220,17 @@ namespace WinTool_json
         {
             foreach (DataGridViewRow dtr in dataGridViewPodmienky.Rows)
             {
-                if (dtr.Cells[0].Value != null)
+                try
                 {
-                    if ((int)dtr.Cells[0].Value == 0)
-                        dtr.Cells[0].Value = vybranyProces?.id;
+                    if (dtr.Cells[0].Value != null)
+                    {
+                        if ((int)dtr.Cells[0].Value == 0)
+                            dtr.Cells[0].Value = vybranyProces?.id;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    labelSpracovavam.Text = "Chyba: " + ex.Message;
                 }
             }
         }
@@ -263,7 +277,7 @@ namespace WinTool_json
                 podmienkyBindingSource.List.Add(onePodmienka);
 
             // aka je cesta?
-            textBoxUmiesteniePDF.Text = xmle.podmienky.Find(t => t.parameter == Podmienky.CESTA_PDF)?.hodnota;
+            textBoxUmiesteniePDF.Text = xmle.podmienky.Find(t => t.funkcia == Podmienky.CESTA_PDF)?.hodnota;
         }
 
         private void checkBoxSpustene_CheckedChanged(object sender, EventArgs e)

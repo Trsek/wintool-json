@@ -194,6 +194,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="WinTool-json.ico" />
+    <Content Include="wintool.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

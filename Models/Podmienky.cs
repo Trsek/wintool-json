@@ -5,7 +5,9 @@ namespace WinTool_json.Models
     [Serializable]
     public class Podmienky
     {
-        public const string CESTA_PDF = "CESTA_PDF";
+        public const string CESTA_PDF = "Cesta PDF";
+        public const string DUPLIKOVAT = "Duplikovať";
+        public const string NAZOV_PDF = "Názov PDF";
 
         public int id_proces { get; set; }
         public string parameter { get; set; }

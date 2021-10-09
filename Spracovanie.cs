@@ -127,7 +127,7 @@ namespace WinTool_json
             return subory;
         }
 
-        public void OdsunSpracovanySubor(string subor)
+        public void OdsunSpracovanyJSON(string subor)
         {
             string ciel = xmle.SpracovanyPriecinok + "\\" + Path.GetFileName(subor);
 
@@ -192,32 +192,140 @@ namespace WinTool_json
 
         public void Spracuj(string subor)
         {
-            Thread.Sleep(500);
+            Thread.Sleep(50);
             JsonValue json = JsonValue.Parse(File.ReadAllText(subor));
-            string PDFPrecinok = xmle.podmienky.Find(t => t.parameter == Podmienky.CESTA_PDF).hodnota;
+            string PDFPrecinok = xmle.podmienky.Find(t => t.funkcia == Podmienky.CESTA_PDF).hodnota;
 
-            string nazov = (string)json["id"];
-            int quantity = (int)json["order"]["quantity"];
+            if (string.IsNullOrEmpty(PDFPrecinok) || json == null)
+                return;
 
             foreach (FileSystemInfo file in new DirectoryInfo(Path.GetDirectoryName(subor)).GetFiles("*.pdf", SearchOption.AllDirectories))
             {
-                if (file.Name.Contains(nazov))
+                foreach (Proces proces in xmle.proces)
                 {
-                    // urobim X kopii
-                    for (int i = 0; i < quantity; i++)
+                    if (SplnujePodmienky(file.Name, proces.id, json))
                     {
-                        string fileCiel = PDFPrecinok + "\\"
-                            + Path.GetFileNameWithoutExtension(file.FullName)
-                            + ((i > 0) ? ("_" + i.ToString("D3")) : "")
-                            + Path.GetExtension(file.FullName);
+                        // urobim X kopii
+                        for (int i = 0; i < PocetKopii(proces.id, json); i++)
+                        {
+                            string fileCiel = PDFPrecinok + "\\"
+                                + Path.GetFileNameWithoutExtension(file.FullName)
+                                + ((i > 0) ? ("_" + i.ToString("D3")) : "")
+                                + Path.GetExtension(file.FullName);
 
-                        if (!File.Exists(fileCiel))
-                            File.Copy(file.FullName, fileCiel);
+                            if (!File.Exists(fileCiel))
+                                File.Copy(file.FullName, fileCiel);
+                        }
                     }
                 }
             }
 
-            OdsunSpracovanySubor(subor);
+            OdsunSpracovanyJSON(subor);
+        }
+
+        public double GetSafeDouble(string str_value, int default_value = 0)
+        {
+            double value = default_value;
+
+            if (Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator != ".")
+                str_value = str_value.Replace('.', ',');
+            else
+                str_value = str_value.Replace(',', '.');
+
+            if (double.TryParse(str_value, out value))
+                return value;
+
+            return default_value;
+        }
+
+        public string GetJsonValue(string parameter, JsonValue json)
+        {
+            if (string.IsNullOrEmpty(parameter))
+                return "";
+
+            foreach(string key_one in parameter.Split(new string[] { "}{" }, StringSplitOptions.None))
+            {
+                string key = key_one.Replace(" ", "").Replace("{", "").Replace("}", "");
+
+                if (json?.JsonType == JsonType.Array)
+                {
+                    foreach (JsonValue json_one in json)
+                    {
+                        if (json_one.ContainsKey(key))
+                        {
+                            json = json_one;
+                            break;
+                        }
+                    }
+                }
+
+                if (json?.ContainsKey(key) == true)
+                    json = json[key];
+                else
+                    json = null;
+            }
+
+            if ((json == null)
+             || (json?.JsonType == JsonType.Array)
+             || (json?.JsonType == JsonType.Object))
+                return "";
+
+            return json.ToString().Replace("\"", "");
+        }
+
+        public bool SplnujePodmienky(string fileName, int id_proces, JsonValue json)
+        {
+            foreach(Podmienky podmienka in xmle.podmienky.FindAll(t => t.id_proces == id_proces))
+            {
+                string value = GetJsonValue(podmienka.parameter, json).Trim();
+                podmienka.hodnota = string.IsNullOrEmpty(podmienka.hodnota)? "": podmienka.hodnota.Trim();
+
+                if ((podmienka.funkcia == Podmienky.DUPLIKOVAT)
+                 || (podmienka.funkcia == Podmienky.CESTA_PDF))
+                    continue;
+
+                // v nazve PDF musi byt tento text (napr. cover)
+                if (podmienka.funkcia == Podmienky.NAZOV_PDF)
+                {
+                    if (!fileName.Contains(podmienka.hodnota))
+                        return false;
+
+                    continue;
+                }
+
+                // bude kontrola na hodnotu alebo rozsah
+                if (podmienka.hodnota.Contains("-"))
+                {
+                    string[] values = podmienka.hodnota.Split(new string[] { "-" }, StringSplitOptions.None);
+
+                    if ((GetSafeDouble(values[0]) > GetSafeDouble(value))
+                     || (GetSafeDouble(value) > GetSafeDouble(values[1])))
+                        return false;
+
+                    continue;
+                }
+
+                // kontrola na konkretnu hodnotu
+                if (value != podmienka.hodnota)
+                    return false;
+            }
+
+            return true;
+        }
+
+        public int PocetKopii(int id_proces, JsonValue json)
+        {
+            int quantity = (int)json["order"]["quantity"];
+            string parameter = xmle.podmienky.Find(t => (t.id_proces == id_proces) && (t.funkcia == Podmienky.DUPLIKOVAT))?.parameter;
+
+            // hladaj v JSON
+            if (!string.IsNullOrEmpty(parameter))
+            {
+                string value = GetJsonValue(parameter, json);
+                quantity = (int)GetSafeDouble(value, quantity);
+            }
+
+            return quantity;
         }
     }
 }

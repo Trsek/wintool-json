@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<Exchange xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <proces>
+    <Proces>
+      <id>1</id>
+      <nazov>Pages Photobook A 4 HC</nazov>
+    </Proces>
+    <Proces>
+      <id>2</id>
+      <nazov>Cover Photobook A4 HC 24-34</nazov>
+    </Proces>
+    <Proces>
+      <id>3</id>
+      <nazov>Cover Photobook A4 HC 35-47</nazov>
+    </Proces>
+    <Proces>
+      <id>4</id>
+      <nazov>Cover Photobook A4 HC 48-60</nazov>
+    </Proces>
+    <Proces>
+      <id>5</id>
+      <nazov>Cover Photobook A4 HC 61-71</nazov>
+    </Proces>
+    <Proces>
+      <id>6</id>
+      <nazov>Cover Photobook A4 HC 72-83</nazov>
+    </Proces>
+    <Proces>
+      <id>7</id>
+      <nazov>Cover Photobook A4 HC 83-95</nazov>
+    </Proces>
+    <Proces>
+      <id>8</id>
+      <nazov>Cover Photobook A4 HC 96-106</nazov>
+    </Proces>
+  </proces>
+  <podmienky>
+    <Podmienky>
+      <id_proces>1</id_proces>
+      <parameter>{family}{id}</parameter>
+      <hodnota>18</hodnota>
+    </Podmienky>
+    <Podmienky>
+      <id_proces>1</id_proces>
+      <parameter>{params}{spine_width}</parameter>
+      <hodnota>8-9</hodnota>
+    </Podmienky>
+    <Podmienky>
+      <id_proces>1</id_proces>
+      <hodnota>cover</hodnota>
+      <funkcia>Názov PDF</funkcia>
+    </Podmienky>
+    <Podmienky>
+      <id_proces>1</id_proces>
+      <parameter>{params}{attribute_values}{size}</parameter>
+      <hodnota>A5 Horizontal</hodnota>
+    </Podmienky>
+    <Podmienky>
+      <id_proces>1</id_proces>
+      <parameter>{params}{attribute_values}{type}</parameter>
+      <hodnota>hardcover</hodnota>
+    </Podmienky>
+    <Podmienky>
+      <id_proces>1</id_proces>
+      <parameter>{files}{copies}</parameter>
+      <funkcia>Duplikovať</funkcia>
+    </Podmienky>
+    <Podmienky>
+      <id_proces>1</id_proces>
+      <hodnota>C:\Temp</hodnota>
+      <funkcia>Cesta PDF</funkcia>
+    </Podmienky>
+    <Podmienky>
+      <id_proces>2</id_proces>
+      <parameter>par1</parameter>
+      <hodnota>h1</hodnota>
+      <funkcia>f1</funkcia>
+    </Podmienky>
+    <Podmienky>
+      <id_proces>2</id_proces>
+      <parameter>par2</parameter>
+      <hodnota>h2</hodnota>
+      <funkcia>f2</funkcia>
+    </Podmienky>
+    <Podmienky>
+      <id_proces>3</id_proces>
+      <parameter>nema nic?</parameter>
+    </Podmienky>
+  </podmienky>
+  <perioda>5</perioda>
+  <ZdrojovyPriecinok>C:\Dokumenty\Visual Studio 2019\Projects\WinTool-json\bin\Debug\Test</ZdrojovyPriecinok>
+  <SpracovanyPriecinok>C:\Dokumenty\Visual Studio 2019\Projects\WinTool-json\bin\Debug\output</SpracovanyPriecinok>
+</Exchange>
