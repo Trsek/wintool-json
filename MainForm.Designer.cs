@@ -36,7 +36,6 @@ namespace WinTool_json
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.bindingNavigatorProcesy = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.procesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -48,14 +47,7 @@ namespace WinTool_json
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.dataGridViewProcesy = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nazovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewPodmienky = new System.Windows.Forms.DataGridView();
-            this.idprocesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parameterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hodnotaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.funkciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.podmienkyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorPodmienky = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -88,19 +80,27 @@ namespace WinTool_json
             this.buttonVyberPriklad = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.dataGridViewPriklady = new System.Windows.Forms.DataGridView();
-            this.parameterDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hodnota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parameterDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prikladyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.podmienkyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idprocesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parameterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hodnotaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.funkciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.procesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorProcesy)).BeginInit();
             this.bindingNavigatorProcesy.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.procesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProcesy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPodmienky)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.podmienkyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorPodmienky)).BeginInit();
             this.bindingNavigatorPodmienky.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPriklady)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prikladyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.podmienkyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.procesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonUlozit
@@ -172,11 +172,6 @@ namespace WinTool_json
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Přidat nový";
-            // 
-            // procesBindingSource
-            // 
-            this.procesBindingSource.DataSource = typeof(WinTool_json.Models.Proces);
-            this.procesBindingSource.Filter = "";
             // 
             // bindingNavigatorCountItem
             // 
@@ -273,20 +268,6 @@ namespace WinTool_json
             this.dataGridViewProcesy.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProcesy_CellClick);
             this.dataGridViewProcesy.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridViewProcesy_RowValidating);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nazovDataGridViewTextBoxColumn
-            // 
-            this.nazovDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nazovDataGridViewTextBoxColumn.DataPropertyName = "nazov";
-            this.nazovDataGridViewTextBoxColumn.HeaderText = "Názov";
-            this.nazovDataGridViewTextBoxColumn.Name = "nazovDataGridViewTextBoxColumn";
-            // 
             // dataGridViewPodmienky
             // 
             this.dataGridViewPodmienky.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -300,43 +281,11 @@ namespace WinTool_json
             this.hodnotaDataGridViewTextBoxColumn,
             this.funkciaDataGridViewTextBoxColumn});
             this.dataGridViewPodmienky.DataSource = this.podmienkyBindingSource;
-            this.dataGridViewPodmienky.Location = new System.Drawing.Point(346, 43);
+            this.dataGridViewPodmienky.Location = new System.Drawing.Point(329, 43);
             this.dataGridViewPodmienky.Name = "dataGridViewPodmienky";
-            this.dataGridViewPodmienky.Size = new System.Drawing.Size(476, 390);
+            this.dataGridViewPodmienky.Size = new System.Drawing.Size(432, 390);
             this.dataGridViewPodmienky.TabIndex = 4;
             this.dataGridViewPodmienky.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridViewPodmienky_RowValidating);
-            // 
-            // idprocesDataGridViewTextBoxColumn
-            // 
-            this.idprocesDataGridViewTextBoxColumn.DataPropertyName = "id_proces";
-            this.idprocesDataGridViewTextBoxColumn.HeaderText = "id_proces";
-            this.idprocesDataGridViewTextBoxColumn.Name = "idprocesDataGridViewTextBoxColumn";
-            this.idprocesDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // parameterDataGridViewTextBoxColumn
-            // 
-            this.parameterDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.parameterDataGridViewTextBoxColumn.DataPropertyName = "parameter";
-            this.parameterDataGridViewTextBoxColumn.HeaderText = "Parameter";
-            this.parameterDataGridViewTextBoxColumn.Name = "parameterDataGridViewTextBoxColumn";
-            // 
-            // hodnotaDataGridViewTextBoxColumn
-            // 
-            this.hodnotaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.hodnotaDataGridViewTextBoxColumn.DataPropertyName = "hodnota";
-            this.hodnotaDataGridViewTextBoxColumn.HeaderText = "Hodnota";
-            this.hodnotaDataGridViewTextBoxColumn.Name = "hodnotaDataGridViewTextBoxColumn";
-            // 
-            // funkciaDataGridViewTextBoxColumn
-            // 
-            this.funkciaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.funkciaDataGridViewTextBoxColumn.DataPropertyName = "funkcia";
-            this.funkciaDataGridViewTextBoxColumn.HeaderText = "Funkcia";
-            this.funkciaDataGridViewTextBoxColumn.Name = "funkciaDataGridViewTextBoxColumn";
-            // 
-            // podmienkyBindingSource
-            // 
-            this.podmienkyBindingSource.DataSource = typeof(WinTool_json.Models.Podmienky);
             // 
             // bindingNavigatorPodmienky
             // 
@@ -358,7 +307,7 @@ namespace WinTool_json
             this.toolStripSeparator3,
             this.toolStripButton1,
             this.toolStripButton2});
-            this.bindingNavigatorPodmienky.Location = new System.Drawing.Point(346, 462);
+            this.bindingNavigatorPodmienky.Location = new System.Drawing.Point(329, 462);
             this.bindingNavigatorPodmienky.MoveFirstItem = this.toolStripButton3;
             this.bindingNavigatorPodmienky.MoveLastItem = this.toolStripButton6;
             this.bindingNavigatorPodmienky.MoveNextItem = this.toolStripButton5;
@@ -467,7 +416,7 @@ namespace WinTool_json
             // labelPodmienky
             // 
             this.labelPodmienky.AutoSize = true;
-            this.labelPodmienky.Location = new System.Drawing.Point(343, 12);
+            this.labelPodmienky.Location = new System.Drawing.Point(326, 12);
             this.labelPodmienky.Name = "labelPodmienky";
             this.labelPodmienky.Size = new System.Drawing.Size(100, 13);
             this.labelPodmienky.TabIndex = 3;
@@ -476,9 +425,9 @@ namespace WinTool_json
             // buttonUmiestnitPDF
             // 
             this.buttonUmiestnitPDF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonUmiestnitPDF.Location = new System.Drawing.Point(720, 436);
+            this.buttonUmiestnitPDF.Location = new System.Drawing.Point(663, 436);
             this.buttonUmiestnitPDF.Name = "buttonUmiestnitPDF";
-            this.buttonUmiestnitPDF.Size = new System.Drawing.Size(102, 25);
+            this.buttonUmiestnitPDF.Size = new System.Drawing.Size(98, 25);
             this.buttonUmiestnitPDF.TabIndex = 6;
             this.buttonUmiestnitPDF.Text = "Umiestniť &PDF";
             this.buttonUmiestnitPDF.UseVisualStyleBackColor = true;
@@ -606,7 +555,7 @@ namespace WinTool_json
             // 
             this.textBoxUmiesteniePDF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxUmiesteniePDF.Location = new System.Drawing.Point(346, 439);
+            this.textBoxUmiesteniePDF.Location = new System.Drawing.Point(329, 439);
             this.textBoxUmiesteniePDF.Name = "textBoxUmiesteniePDF";
             this.textBoxUmiesteniePDF.Size = new System.Drawing.Size(328, 20);
             this.textBoxUmiesteniePDF.TabIndex = 5;
@@ -616,7 +565,7 @@ namespace WinTool_json
             // 
             this.labelPriklady.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPriklady.AutoSize = true;
-            this.labelPriklady.Location = new System.Drawing.Point(911, 12);
+            this.labelPriklady.Location = new System.Drawing.Point(790, 12);
             this.labelPriklady.Name = "labelPriklady";
             this.labelPriklady.Size = new System.Drawing.Size(103, 13);
             this.labelPriklady.TabIndex = 17;
@@ -651,22 +600,13 @@ namespace WinTool_json
             this.parameterDataGridViewTextBoxColumn1,
             this.hodnota});
             this.dataGridViewPriklady.DataSource = this.prikladyBindingSource;
-            this.dataGridViewPriklady.Location = new System.Drawing.Point(860, 43);
+            this.dataGridViewPriklady.Location = new System.Drawing.Point(793, 43);
             this.dataGridViewPriklady.Name = "dataGridViewPriklady";
             this.dataGridViewPriklady.ReadOnly = true;
             this.dataGridViewPriklady.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewPriklady.ShowCellToolTips = false;
-            this.dataGridViewPriklady.Size = new System.Drawing.Size(356, 416);
+            this.dataGridViewPriklady.Size = new System.Drawing.Size(423, 416);
             this.dataGridViewPriklady.TabIndex = 18;
             this.dataGridViewPriklady.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPriklad_CellDoubleClick);
-            // 
-            // parameterDataGridViewTextBoxColumn1
-            // 
-            this.parameterDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.parameterDataGridViewTextBoxColumn1.DataPropertyName = "parameter";
-            this.parameterDataGridViewTextBoxColumn1.HeaderText = "Parameter";
-            this.parameterDataGridViewTextBoxColumn1.Name = "parameterDataGridViewTextBoxColumn1";
-            this.parameterDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // hodnota
             // 
@@ -676,9 +616,68 @@ namespace WinTool_json
             this.hodnota.Name = "hodnota";
             this.hodnota.ReadOnly = true;
             // 
+            // parameterDataGridViewTextBoxColumn1
+            // 
+            this.parameterDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.parameterDataGridViewTextBoxColumn1.DataPropertyName = "parameter";
+            this.parameterDataGridViewTextBoxColumn1.HeaderText = "Parameter";
+            this.parameterDataGridViewTextBoxColumn1.Name = "parameterDataGridViewTextBoxColumn1";
+            this.parameterDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
             // prikladyBindingSource
             // 
             this.prikladyBindingSource.DataSource = typeof(WinTool_json.Models.Priklady);
+            // 
+            // podmienkyBindingSource
+            // 
+            this.podmienkyBindingSource.DataSource = typeof(WinTool_json.Models.Podmienky);
+            // 
+            // idprocesDataGridViewTextBoxColumn
+            // 
+            this.idprocesDataGridViewTextBoxColumn.DataPropertyName = "id_proces";
+            this.idprocesDataGridViewTextBoxColumn.HeaderText = "id_proces";
+            this.idprocesDataGridViewTextBoxColumn.Name = "idprocesDataGridViewTextBoxColumn";
+            this.idprocesDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // parameterDataGridViewTextBoxColumn
+            // 
+            this.parameterDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.parameterDataGridViewTextBoxColumn.DataPropertyName = "parameter";
+            this.parameterDataGridViewTextBoxColumn.HeaderText = "Parameter";
+            this.parameterDataGridViewTextBoxColumn.Name = "parameterDataGridViewTextBoxColumn";
+            // 
+            // hodnotaDataGridViewTextBoxColumn
+            // 
+            this.hodnotaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.hodnotaDataGridViewTextBoxColumn.DataPropertyName = "hodnota";
+            this.hodnotaDataGridViewTextBoxColumn.HeaderText = "Hodnota";
+            this.hodnotaDataGridViewTextBoxColumn.Name = "hodnotaDataGridViewTextBoxColumn";
+            // 
+            // funkciaDataGridViewTextBoxColumn
+            // 
+            this.funkciaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.funkciaDataGridViewTextBoxColumn.DataPropertyName = "funkcia";
+            this.funkciaDataGridViewTextBoxColumn.HeaderText = "Funkcia";
+            this.funkciaDataGridViewTextBoxColumn.Name = "funkciaDataGridViewTextBoxColumn";
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nazovDataGridViewTextBoxColumn
+            // 
+            this.nazovDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nazovDataGridViewTextBoxColumn.DataPropertyName = "nazov";
+            this.nazovDataGridViewTextBoxColumn.HeaderText = "Názov";
+            this.nazovDataGridViewTextBoxColumn.Name = "nazovDataGridViewTextBoxColumn";
+            // 
+            // procesBindingSource
+            // 
+            this.procesBindingSource.DataSource = typeof(WinTool_json.Models.Proces);
+            this.procesBindingSource.Filter = "";
             // 
             // MainForm
             // 
