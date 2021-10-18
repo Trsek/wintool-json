@@ -12,7 +12,6 @@ namespace WinTool_json
     public class Spracovanie
     {
         public string xmlFilename;
-        public string xmlTimeStamp = "TimeStamp.xml";
         public Label labelSpracovavam = new Label();
         public ProgressBar progressBar = new ProgressBar();
 
@@ -70,32 +69,6 @@ namespace WinTool_json
             catch { }
         }
 
-        private DateTime TimeStampExchange(DateTime dtZapis, bool zapis)
-        {
-            try
-            {
-                if (zapis)
-                {
-                    using (var fileStream = new FileStream(xmlTimeStamp, FileMode.Create))
-                    {
-                        var ser = new XmlSerializer(typeof(DateTime));
-                        ser.Serialize(fileStream, dtZapis);
-                    }
-                }
-                else
-                {
-                    using (var fileStream = new FileStream(xmlTimeStamp, FileMode.Open))
-                    {
-                        var ser = new XmlSerializer(typeof(DateTime));
-                        dtZapis = (DateTime)ser.Deserialize(fileStream);
-                    }
-                }
-            }
-            catch { }
-
-            return dtZapis;
-        }
-
         private bool Deserialize()
         {
             try
@@ -114,27 +87,45 @@ namespace WinTool_json
             return true;
         }
 
-        public List<string> ZoznamSubory(string cesta, DateTime dtZaciatok)
+        public List<string> ZoznamSubory(string cesta)
         {
             List<string> subory = new List<string>();
 
             foreach (FileSystemInfo file in new DirectoryInfo(cesta).GetFiles("*.json", SearchOption.AllDirectories))
             {
-                if (File.GetLastWriteTime(file.FullName) > dtZaciatok)
-                    subory.Add(file.FullName);
+                subory.Add(file.FullName);
             }
 
             return subory;
         }
 
-        public void OdsunSpracovanyJSON(string subor)
+        public void OdsunSpracovanyAdresar(string adresar)
         {
-            string ciel = xmle.SpracovanyPriecinok + "\\" + Path.GetFileName(subor);
+            DirectoryInfo dir = new DirectoryInfo(adresar);
+            DirectoryInfo[] dirs = dir.GetDirectories();
+            string[] files = Directory.GetFiles(adresar);
+            string[] sdir = adresar.Split(new[] { Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar });
 
-            if (File.Exists(ciel))
-                File.Delete(ciel);
+            Directory.CreateDirectory(xmle.SpracovanyPriecinok + "\\" + sdir[sdir.Length - 1]);
 
-            File.Move(subor, xmle.SpracovanyPriecinok + "\\" + Path.GetFileName(subor));
+            foreach (string file in files)
+            {
+                string name = Path.GetFileName(file);
+                string destFile = Path.Combine(xmle.SpracovanyPriecinok + "\\" + sdir[sdir.Length-1], name);
+
+                if (name != "file")
+                    File.Move(file, destFile);
+            }
+
+            foreach (DirectoryInfo subdir in dirs)
+            {
+                string temppath = Path.Combine(xmle.SpracovanyPriecinok, subdir.Name);
+
+                if (!Directory.Exists(temppath))
+                    Directory.Move(subdir.FullName, temppath);
+            }
+
+            Directory.Delete(adresar, true);
         }
 
         public void Start()
@@ -156,17 +147,15 @@ namespace WinTool_json
 
                     Step();
                     List<string> subory = new List<string>();
-                    DateTime dtZaciatok = TimeStampExchange(DateTime.MinValue, false);
 
                     foreach (DirectoryInfo adresar in new DirectoryInfo(xmle.ZdrojovyPriecinok).GetDirectories())
                     {
                         Info("Zisťujem počet súborov v " + adresar.FullName);
                         Step();
-                        subory.AddRange(ZoznamSubory(adresar.FullName, dtZaciatok));
+                        subory.AddRange(ZoznamSubory(adresar.FullName));
                         Thread.Sleep(500);
                     }
 
-                    TimeStampExchange(DateTime.Now, true);
                     BarValue(0);
                     BarMaximum(subory.Count);
                     foreach (string subor in subory)
@@ -220,7 +209,7 @@ namespace WinTool_json
                 }
             }
 
-            OdsunSpracovanyJSON(subor);
+            OdsunSpracovanyAdresar(Path.GetDirectoryName(subor));
         }
 
         public double GetSafeDouble(string str_value, int default_value = 0)
