@@ -93,12 +93,36 @@ namespace WinTool_json
         {
             try
             {
-                if ((json.Value?.JsonType == JsonType.Array)
-                 || (json.Value?.JsonType == JsonType.Object))
+                if (json.Value?.JsonType == JsonType.Object)
                 {
                     foreach (KeyValuePair<string, JsonValue> json_part in json.Value)
                         FillPrikladyValuePair(json_part, parent + "{" + json_part.Key + "} ");
 
+                    return;
+                }
+
+                if (json.Value?.JsonType == JsonType.Array)
+                {
+                    for (int i = 0; i < json.Value.Count; i++)
+                    {
+                        if (json.Value[i] is JsonObject)
+                        {
+                            foreach (var json_part in json.Value[i])
+                            {
+                                KeyValuePair<string, JsonValue> json_part2 = (KeyValuePair<string, JsonValue>)json_part;
+                                FillPrikladyValuePair(json_part2, parent + "[" + i + "] {" + json_part2.Key + "} ");
+                            }
+                        }
+
+                        if (json.Value[i] is JsonPrimitive)
+                        {
+                            prikladyBindingSource.List.Add(new Priklady()
+                            {
+                                parameter = parent,
+                                hodnota = json.Value[i]?.ToString(),
+                            });
+                        }
+                    }
                     return;
                 }
 
