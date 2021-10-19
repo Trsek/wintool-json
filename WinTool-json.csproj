@@ -80,6 +80,7 @@
     <Compile Include="Models\Podmienky.cs" />
     <Compile Include="Models\Priklady.cs" />
     <Compile Include="Models\Proces.cs" />
+    <Compile Include="NLogLite.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Spracovanie.cs" />

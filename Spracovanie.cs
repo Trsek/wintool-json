@@ -12,6 +12,7 @@ namespace WinTool_json
     public class Spracovanie
     {
         public string xmlFilename;
+        public NLogLite nlog = new NLogLite();
         public Label labelSpracovavam = new Label();
         public ProgressBar progressBar = new ProgressBar();
 
@@ -190,8 +191,13 @@ namespace WinTool_json
 
             foreach (FileSystemInfo file in new DirectoryInfo(Path.GetDirectoryName(subor)).GetFiles("*.pdf", SearchOption.AllDirectories))
             {
+                nlog.Save("------------------------------");
+                nlog.Save(file.FullName);
+                nlog.Save(subor);
+
                 foreach (Proces proces in xmle.proces)
                 {
+                    nlog.Save("proces = " + proces.nazov);
                     if (SplnujePodmienky(file.Name, proces.id, json))
                     {
                         // urobim X kopii
@@ -276,11 +282,17 @@ namespace WinTool_json
                 // v nazve PDF musi byt tento text (napr. cover)
                 if (podmienka.funkcia == Podmienky.NAZOV_PDF)
                 {
+                    nlog.Save(" " + podmienka.funkcia + " -> (ocakavam)" + podmienka.hodnota + " = " + fileName);
                     if (!fileName.Contains(podmienka.hodnota))
+                    {
+                        nlog.Save("  nesplnena");
                         return false;
+                    }
 
                     continue;
                 }
+
+                nlog.Save(" " + podmienka.parameter + " -> (ocakavam)" + podmienka.hodnota + " = (json)" + value);
 
                 // bude kontrola na hodnotu alebo rozsah
                 if (podmienka.hodnota.Contains("-"))
@@ -289,14 +301,20 @@ namespace WinTool_json
 
                     if ((GetSafeDouble(values[0]) > GetSafeDouble(value))
                      || (GetSafeDouble(value) > GetSafeDouble(values[1])))
+                    {
+                        nlog.Save("  nesplnena");
                         return false;
+                    }
 
                     continue;
                 }
 
                 // kontrola na konkretnu hodnotu
                 if (value != podmienka.hodnota)
+                {
+                    nlog.Save("  nesplnena");
                     return false;
+                }
             }
 
             return true;
@@ -314,6 +332,7 @@ namespace WinTool_json
                 quantity = (int)GetSafeDouble(value, quantity);
             }
 
+            nlog.Save("Pocet kopii=" + quantity);
             return quantity;
         }
     }
