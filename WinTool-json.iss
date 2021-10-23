@@ -47,6 +47,9 @@ Source: "bin\Release\*.*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
 Name: "{commonprograms}\{#MyAppName}"; Filename: "{app}"; IconFilename: "{#MyIcon}"
 Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
 
+[Dirs]
+Name: "{app}\Log"
+
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent shellexec
 

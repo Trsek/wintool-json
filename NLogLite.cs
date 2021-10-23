@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 using System.IO;
 
 namespace WinTool_json
@@ -14,6 +13,11 @@ namespace WinTool_json
             File.Delete(logFilename);
         }
 
+        public string TimeStamp()
+        {
+            return DateTime.Now.ToString("HH:mm:ss") + " -> ";
+        }
+
         public void Save(string text)
         {
             if (Directory.Exists(Path.GetDirectoryName(logFilename)))
@@ -24,7 +28,7 @@ namespace WinTool_json
                         File.Delete(logFilename);
                 }
 
-                File.AppendAllText(logFilename, text + Environment.NewLine);
+                File.AppendAllText(logFilename, TimeStamp() + text + Environment.NewLine);
             }
         }
     }

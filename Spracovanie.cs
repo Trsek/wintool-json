@@ -174,6 +174,7 @@ namespace WinTool_json
                 catch (Exception ex)
                 {
                     Info("Chyba: " + ex.Message);
+                    nlog.Save(" Chyba: " + ex.Message);
                 }
 
                 // nakoniec pockame pred dalsim spustenim
