@@ -220,7 +220,7 @@ namespace WinTool_json
             {
                 try
                 {
-                    if (dtr.Cells[0].Value != null)
+                    if (dtr.Cells[0].Value != null && !dtr.IsNewRow)
                     {
                         if ((int)dtr.Cells[0].Value > maxId)
                             maxId = (int)dtr.Cells[0].Value;
@@ -246,7 +246,7 @@ namespace WinTool_json
             {
                 try
                 {
-                    if (dtr.Cells[0].Value != null)
+                    if (dtr.Cells[0].Value != null && !dtr.IsNewRow)
                     {
                         if ((int)dtr.Cells[0].Value == 0)
                             dtr.Cells[0].Value = vybranyProces?.id;
