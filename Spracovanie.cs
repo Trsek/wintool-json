@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Json;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 using System.Xml.Serialization;
@@ -235,37 +236,45 @@ namespace WinTool_json
 
         public string GetJsonValue(string parameter, JsonValue json)
         {
-            if (string.IsNullOrEmpty(parameter))
-                return "";
-
-            foreach(string key_one in parameter.Split(new string[] { "}{" }, StringSplitOptions.None))
+            try
             {
-                string key = key_one.Replace(" ", "").Replace("{", "").Replace("}", "");
+                if (string.IsNullOrEmpty(parameter))
+                    return "";
 
-                if (json?.JsonType == JsonType.Array)
+                foreach (string key in parameter.Replace(" ", "").Split(new string[] { "{", "}", "[", "]" }, StringSplitOptions.RemoveEmptyEntries))
                 {
-                    foreach (JsonValue json_one in json)
+                    if (Regex.IsMatch(key, @"\d"))
+                        json = json[int.Parse(key)];
+                    else
                     {
-                        if (json_one.ContainsKey(key))
+                        if (json?.JsonType == JsonType.Array)
                         {
-                            json = json_one;
-                            break;
+                            foreach (JsonValue json_one in json)
+                            {
+                                if (json_one.ContainsKey(key))
+                                {
+                                    json = json_one;
+                                    break;
+                                }
+                            }
                         }
+
+                        json = json[key];
                     }
                 }
 
-                if (json?.ContainsKey(key) == true)
-                    json = json[key];
-                else
-                    json = null;
+                if ((json == null)
+                 || (json?.JsonType == JsonType.Array)
+                 || (json?.JsonType == JsonType.Object))
+                    return "";
+
+                return json.ToString().Replace("\"", "");
             }
-
-            if ((json == null)
-             || (json?.JsonType == JsonType.Array)
-             || (json?.JsonType == JsonType.Object))
+            catch
+            {
+                nlog.Save(" Chyba GetJsonValue(" + parameter + ", json)");
                 return "";
-
-            return json.ToString().Replace("\"", "");
+            }
         }
 
         public bool SplnujePodmienky(string fileName, int id_proces, JsonValue json)
