@@ -68,7 +68,6 @@ namespace WinTool_json
             this.labelSpracovavam = new System.Windows.Forms.Label();
             this.labelPerioda = new System.Windows.Forms.Label();
             this.textBoxPerioda = new System.Windows.Forms.TextBox();
-            this.checkBoxSpustene = new System.Windows.Forms.CheckBox();
             this.labelCopyright = new System.Windows.Forms.Label();
             this.textBoxZdrojovyPriecinok = new System.Windows.Forms.TextBox();
             this.textBoxSpracovanyPriecinok = new System.Windows.Forms.TextBox();
@@ -81,6 +80,7 @@ namespace WinTool_json
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.dataGridViewPriklady = new System.Windows.Forms.DataGridView();
             this.hodnota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonSpustit = new System.Windows.Forms.Button();
             this.parameterDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prikladyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.podmienkyBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -91,6 +91,7 @@ namespace WinTool_json
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazovDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.procesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.labelMinuta = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorProcesy)).BeginInit();
             this.bindingNavigatorProcesy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProcesy)).BeginInit();
@@ -107,9 +108,9 @@ namespace WinTool_json
             // 
             this.buttonUlozit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonUlozit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonUlozit.Location = new System.Drawing.Point(1099, 523);
+            this.buttonUlozit.Location = new System.Drawing.Point(1099, 505);
             this.buttonUlozit.Name = "buttonUlozit";
-            this.buttonUlozit.Size = new System.Drawing.Size(117, 63);
+            this.buttonUlozit.Size = new System.Drawing.Size(117, 46);
             this.buttonUlozit.TabIndex = 0;
             this.buttonUlozit.Text = "&Uložiť";
             this.buttonUlozit.UseVisualStyleBackColor = true;
@@ -470,32 +471,20 @@ namespace WinTool_json
             // 
             this.labelPerioda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPerioda.AutoSize = true;
-            this.labelPerioda.Location = new System.Drawing.Point(947, 518);
+            this.labelPerioda.Location = new System.Drawing.Point(966, 571);
             this.labelPerioda.Name = "labelPerioda";
-            this.labelPerioda.Size = new System.Drawing.Size(116, 13);
+            this.labelPerioda.Size = new System.Drawing.Size(91, 13);
             this.labelPerioda.TabIndex = 20;
-            this.labelPerioda.Text = "Perioda spustenia [min]";
+            this.labelPerioda.Text = "Perioda spustenia";
             // 
             // textBoxPerioda
             // 
             this.textBoxPerioda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPerioda.Location = new System.Drawing.Point(950, 534);
+            this.textBoxPerioda.Location = new System.Drawing.Point(969, 587);
             this.textBoxPerioda.Name = "textBoxPerioda";
-            this.textBoxPerioda.Size = new System.Drawing.Size(113, 20);
+            this.textBoxPerioda.Size = new System.Drawing.Size(46, 20);
             this.textBoxPerioda.TabIndex = 21;
             this.textBoxPerioda.Text = "5";
-            // 
-            // checkBoxSpustene
-            // 
-            this.checkBoxSpustene.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBoxSpustene.AutoSize = true;
-            this.checkBoxSpustene.Location = new System.Drawing.Point(950, 569);
-            this.checkBoxSpustene.Name = "checkBoxSpustene";
-            this.checkBoxSpustene.Size = new System.Drawing.Size(71, 17);
-            this.checkBoxSpustene.TabIndex = 22;
-            this.checkBoxSpustene.Text = "Spustené";
-            this.checkBoxSpustene.UseVisualStyleBackColor = true;
-            this.checkBoxSpustene.CheckedChanged += new System.EventHandler(this.checkBoxSpustene_CheckedChanged);
             // 
             // labelCopyright
             // 
@@ -616,6 +605,18 @@ namespace WinTool_json
             this.hodnota.Name = "hodnota";
             this.hodnota.ReadOnly = true;
             // 
+            // buttonSpustit
+            // 
+            this.buttonSpustit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSpustit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonSpustit.Location = new System.Drawing.Point(1099, 566);
+            this.buttonSpustit.Name = "buttonSpustit";
+            this.buttonSpustit.Size = new System.Drawing.Size(117, 46);
+            this.buttonSpustit.TabIndex = 23;
+            this.buttonSpustit.Text = "&Spustiť";
+            this.buttonSpustit.UseVisualStyleBackColor = true;
+            this.buttonSpustit.Click += new System.EventHandler(this.buttonSpustit_Click);
+            // 
             // parameterDataGridViewTextBoxColumn1
             // 
             this.parameterDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -679,11 +680,23 @@ namespace WinTool_json
             this.procesBindingSource.DataSource = typeof(WinTool_json.Models.Proces);
             this.procesBindingSource.Filter = "";
             // 
+            // labelMinuta
+            // 
+            this.labelMinuta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelMinuta.AutoSize = true;
+            this.labelMinuta.Location = new System.Drawing.Point(1021, 590);
+            this.labelMinuta.Name = "labelMinuta";
+            this.labelMinuta.Size = new System.Drawing.Size(29, 13);
+            this.labelMinuta.TabIndex = 24;
+            this.labelMinuta.Text = "[min]";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1231, 677);
+            this.Controls.Add(this.labelMinuta);
+            this.Controls.Add(this.buttonSpustit);
             this.Controls.Add(this.dataGridViewPriklady);
             this.Controls.Add(this.buttonVyberPriklad);
             this.Controls.Add(this.labelPriklady);
@@ -693,7 +706,6 @@ namespace WinTool_json
             this.Controls.Add(this.textBoxSpracovanyPriecinok);
             this.Controls.Add(this.textBoxZdrojovyPriecinok);
             this.Controls.Add(this.labelCopyright);
-            this.Controls.Add(this.checkBoxSpustene);
             this.Controls.Add(this.textBoxPerioda);
             this.Controls.Add(this.labelPerioda);
             this.Controls.Add(this.labelSpracovavam);
@@ -716,15 +728,15 @@ namespace WinTool_json
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorProcesy)).EndInit();
             this.bindingNavigatorProcesy.ResumeLayout(false);
             this.bindingNavigatorProcesy.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.procesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProcesy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPodmienky)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.podmienkyBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorPodmienky)).EndInit();
             this.bindingNavigatorPodmienky.ResumeLayout(false);
             this.bindingNavigatorPodmienky.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPriklady)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prikladyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.podmienkyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.procesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -769,7 +781,6 @@ namespace WinTool_json
         private System.Windows.Forms.Label labelSpracovavam;
         private System.Windows.Forms.Label labelPerioda;
         private System.Windows.Forms.TextBox textBoxPerioda;
-        private System.Windows.Forms.CheckBox checkBoxSpustene;
         private System.Windows.Forms.Label labelCopyright;
         private System.Windows.Forms.TextBox textBoxZdrojovyPriecinok;
         private System.Windows.Forms.TextBox textBoxSpracovanyPriecinok;
@@ -792,6 +803,8 @@ namespace WinTool_json
         private System.Windows.Forms.DataGridView dataGridViewPriklady;
         private System.Windows.Forms.DataGridViewTextBoxColumn parameterDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn hodnota;
+        private System.Windows.Forms.Button buttonSpustit;
+        private System.Windows.Forms.Label labelMinuta;
     }
 }
 

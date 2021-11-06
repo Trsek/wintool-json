@@ -29,12 +29,13 @@ namespace WinTool_json
             NacitajExample("example.json");
 
             // spustim thread
-            checkBoxSpustene.Checked = true;
+            buttonSpustit_Click(null, null);
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            checkBoxSpustene.Checked = false;
+            if (thr != null)
+                buttonSpustit_Click(sender, null);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -161,11 +162,6 @@ namespace WinTool_json
         {
             viewPodmienky();
             Serialize();
-
-            // reinicializovat Spracovanie
-            checkBoxSpustene.Checked = false;
-            Thread.Sleep(500);
-            checkBoxSpustene.Checked = true;
         }
 
         private void Serialize()
@@ -310,9 +306,9 @@ namespace WinTool_json
             }
         }
 
-        private void checkBoxSpustene_CheckedChanged(object sender, EventArgs e)
+        private void buttonSpustit_Click(object sender, EventArgs e)
         {
-            if (checkBoxSpustene.Checked)
+            if (thr == null)
             {
                 Spracovanie spracovanie = new Spracovanie();
                 spracovanie.labelSpracovavam = labelSpracovavam;
@@ -321,11 +317,13 @@ namespace WinTool_json
 
                 thr = new Thread(new ThreadStart(spracovanie.Start));
                 thr.Start();
+                buttonSpustit.Text = "&Zastaviť";
             }
             else
             {
                 thr?.Abort();
                 thr = null;
+                buttonSpustit.Text = "&Spustiť";
             }
         }
     }

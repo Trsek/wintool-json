@@ -178,7 +178,7 @@ namespace WinTool_json
                 }
 
                 // nakoniec pockame pred dalsim spustenim
-                Thread.Sleep(xmle.periodaInt * 1000);
+                Thread.Sleep(xmle.periodaInt * 60 * 1000);
             }
         }
 
