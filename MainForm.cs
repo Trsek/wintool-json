@@ -286,9 +286,6 @@ namespace WinTool_json
 
         private void viewPodmienky()
         {
-            if (vybranyProces == null)
-                return;
-
             // zmazem stare
             xmle.podmienky.RemoveAll(p => p.id_proces == GetIdPodmienok());
             foreach (Podmienky onePodmienka in podmienkyBindingSource.List)
@@ -297,11 +294,20 @@ namespace WinTool_json
             // nastavim nove podla vybranyProces.id
             podmienkyBindingSource.List.Clear();
 
+            if (vybranyProces == null)
+            {
+                textBoxUmiesteniePDF.Text = string.Empty;
+                return;
+            }
+
             foreach (Podmienky onePodmienka in xmle.podmienky.FindAll(t => t.id_proces == vybranyProces.id))
+            {
                 podmienkyBindingSource.List.Add(onePodmienka);
 
-            // aka je cesta?
-            textBoxUmiesteniePDF.Text = xmle.podmienky.Find(t => t.funkcia == Podmienky.CESTA_PDF)?.hodnota;
+                // aka je cesta?
+                if (onePodmienka.funkcia == Podmienky.CESTA_PDF)
+                    textBoxUmiesteniePDF.Text = onePodmienka.hodnota;
+            }
         }
 
         private void checkBoxSpustene_CheckedChanged(object sender, EventArgs e)
