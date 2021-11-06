@@ -28,6 +28,10 @@ namespace WinTool_json
             viewPodmienky();
             NacitajExample("example.json");
 
+            dataGridViewPodmienky.AllowUserToAddRows = false;
+            dataGridViewPriklady.AllowUserToAddRows = false;
+            dataGridViewProcesy.AllowUserToAddRows = false;
+
             // spustim thread
             buttonSpustit_Click(null, null);
         }
@@ -304,6 +308,15 @@ namespace WinTool_json
                 if (onePodmienka.funkcia == Podmienky.CESTA_PDF)
                     textBoxUmiesteniePDF.Text = onePodmienka.hodnota;
             }
+
+            if (xmle.podmienky.FindAll(t => t.id_proces == vybranyProces.id && t.funkcia == Podmienky.CESTA_PDF).Count == 0)
+            {
+                Podmienky onePodmienka = new Podmienky()
+                {
+                    funkcia = Podmienky.CESTA_PDF
+                };
+                podmienkyBindingSource.List.Add(onePodmienka);
+            }
         }
 
         private void buttonSpustit_Click(object sender, EventArgs e)
@@ -325,6 +338,12 @@ namespace WinTool_json
                 thr = null;
                 buttonSpustit.Text = "&Spustiť";
             }
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            vybranyProces = null;
+            viewPodmienky();
         }
     }
 }
