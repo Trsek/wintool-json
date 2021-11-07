@@ -116,7 +116,10 @@ namespace WinTool_json
                 string destFile = Path.Combine(xmle.SpracovanyPriecinok + "\\" + sdir[sdir.Length-1], name);
 
                 if (name != "file")
-                    File.Move(file, destFile);
+                {
+                    File.Copy(file, destFile, true);
+                    File.Delete(file);
+                }
             }
 
             foreach (DirectoryInfo subdir in dirs)
@@ -191,6 +194,9 @@ namespace WinTool_json
             if (string.IsNullOrEmpty(PDFPrecinok) || json == null)
                 return;
 
+            if (!Directory.Exists(PDFPrecinok))
+                Directory.CreateDirectory(PDFPrecinok);
+
             foreach (FileSystemInfo file in new DirectoryInfo(Path.GetDirectoryName(subor)).GetFiles("*.pdf", SearchOption.AllDirectories))
             {
                 nlog.Save("------------------------------");
@@ -203,7 +209,8 @@ namespace WinTool_json
                     if (SplnujePodmienky(file.Name, proces.id, json))
                     {
                         // urobim X kopii
-                        for (int i = 0; i < PocetKopii(proces.id, json); i++)
+                        int kopii = PocetKopii(proces.id, json);
+                        for (int i = 0; i < kopii; i++)
                         {
                             string fileCiel = PDFPrecinok + "\\"
                                 + Path.GetFileNameWithoutExtension(file.FullName)
