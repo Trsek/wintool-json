@@ -321,6 +321,13 @@ namespace WinTool_json
 
         private void buttonSpustit_Click(object sender, EventArgs e)
         {
+            if (DateTime.Now > new DateTime(2021, 11, 21))
+            {
+                buttonSpustit.Text = "&Out of trial";
+                buttonSpustit.BackColor = System.Drawing.Color.Red;
+                return;
+            }
+
             if (thr == null)
             {
                 Spracovanie spracovanie = new Spracovanie();
@@ -330,13 +337,15 @@ namespace WinTool_json
 
                 thr = new Thread(new ThreadStart(spracovanie.Start));
                 thr.Start();
-                buttonSpustit.Text = "&Zastaviť";
+                buttonSpustit.Text = "&Beží";
+                buttonSpustit.BackColor = System.Drawing.Color.LimeGreen;
             }
             else
             {
                 thr?.Abort();
                 thr = null;
-                buttonSpustit.Text = "&Spustiť";
+                buttonSpustit.Text = "&Zastavené";
+                buttonSpustit.BackColor = Control.DefaultBackColor;
             }
         }
 
