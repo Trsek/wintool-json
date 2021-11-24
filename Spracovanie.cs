@@ -190,6 +190,7 @@ namespace WinTool_json
             Thread.Sleep(50);
             JsonValue json = JsonValue.Parse(File.ReadAllText(subor));
             string PDFPrecinok = xmle.podmienky.Find(t => t.funkcia == Podmienky.CESTA_PDF).hodnota;
+            bool odsun = false;
 
             if (string.IsNullOrEmpty(PDFPrecinok) || json == null)
                 return;
@@ -220,11 +221,13 @@ namespace WinTool_json
                             if (!File.Exists(fileCiel))
                                 File.Copy(file.FullName, fileCiel);
                         }
+                        odsun = true;
                     }
                 }
             }
 
-            OdsunSpracovanyAdresar(Path.GetDirectoryName(subor));
+            if (odsun)
+                OdsunSpracovanyAdresar(Path.GetDirectoryName(subor));
         }
 
         public double GetSafeDouble(string str_value, int default_value = 0)
