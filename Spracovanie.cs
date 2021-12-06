@@ -189,14 +189,10 @@ namespace WinTool_json
         {
             Thread.Sleep(50);
             JsonValue json = JsonValue.Parse(File.ReadAllText(subor));
-            string PDFPrecinok = xmle.podmienky.Find(t => t.funkcia == Podmienky.CESTA_PDF).hodnota;
             bool odsun = false;
 
-            if (string.IsNullOrEmpty(PDFPrecinok) || json == null)
+            if (json == null)
                 return;
-
-            if (!Directory.Exists(PDFPrecinok))
-                Directory.CreateDirectory(PDFPrecinok);
 
             foreach (FileSystemInfo file in new DirectoryInfo(Path.GetDirectoryName(subor)).GetFiles("*.pdf", SearchOption.AllDirectories))
             {
@@ -206,6 +202,15 @@ namespace WinTool_json
 
                 foreach (Proces proces in xmle.proces)
                 {
+                    // aky je PDFPriecinok
+                    string PDFPriecinok = xmle.podmienky.Find(t => t.id_proces == proces.id && t.funkcia == Podmienky.CESTA_PDF).hodnota;
+
+                    if (string.IsNullOrEmpty(PDFPriecinok))
+                        return;
+
+                    if (!Directory.Exists(PDFPriecinok))
+                        Directory.CreateDirectory(PDFPriecinok);
+
                     nlog.Save("proces = " + proces.nazov);
                     if (SplnujePodmienky(file.Name, proces.id, json))
                     {
@@ -213,7 +218,7 @@ namespace WinTool_json
                         int kopii = PocetKopii(proces.id, json);
                         for (int i = 0; i < kopii; i++)
                         {
-                            string fileCiel = PDFPrecinok + "\\"
+                            string fileCiel = PDFPriecinok + "\\"
                                 + Path.GetFileNameWithoutExtension(file.FullName)
                                 + ((i > 0) ? ("_" + i.ToString("D3")) : "")
                                 + Path.GetExtension(file.FullName);
