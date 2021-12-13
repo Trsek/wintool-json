@@ -321,13 +321,6 @@ namespace WinTool_json
 
         private void buttonSpustit_Click(object sender, EventArgs e)
         {
-            if (DateTime.Now > new DateTime(2021, 11, 21))
-            {
-                buttonSpustit.Text = "&Out of trial";
-                buttonSpustit.BackColor = System.Drawing.Color.Red;
-                return;
-            }
-
             if (thr == null)
             {
                 Spracovanie spracovanie = new Spracovanie();
